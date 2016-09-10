@@ -1,22 +1,42 @@
 //#include <FiniteStateMachine.h>
 
-#define OPTO_DI digitalRead(10)
-#define OPTO_DD digitalRead(11)
-#define OPTO_TI digitalRead(12)
-#define OPTO_TD digitalRead(13)
+//#define OPTO_DI digitalRead(10) //Opto de linea Delantero Izq Generico
+//#define OPTO_DD digitalRead(11) //Opto de linea Delantero Der Generico
+//#define OPTO_TI digitalRead(12) //Opto de linea Trasero Izq Generico
+//#define OPTO_TD digitalRead(13) //Opto de linea Trasero Der Generico
 
-#define SALIDA_1 0
-#define SALIDA_2 1
-#define SALIDA_3 2
-#define SALIDA_4 4
+#define OPTO_DI digitalRead(12) //Conf placa Robot Labo
+#define OPTO_DD digitalRead(13) //Conf placa Robot Labo
+#define OPTO_TI digitalRead(10) //Conf placa Robot Labo
+#define OPTO_TD digitalRead(11) //Conf placa Robot Labo
+
+
+#define SALIDA_1 0             //LED 1
+#define SALIDA_2 1             //LED 2
+#define SALIDA_3 2             //LED 3
+#define SALIDA_4 4             //LED 4
+
+// Definicion de tiempos.
+#define T_GIR_DER 800    
+#define T_GIR_IZQ 800
+#define T_ATRAS   1500
+#define T_AV      4000
+
+
+// Pulsadores, entradas de contactos
+//Definir segun robot
 
 #define PULSADOR_DELANTERO digitalRead(16)
 #define PULSADOR_TRASERO digitalRead(18)
 #define PULSADOR_IZQUIERDO digitalRead(20)
 #define PULSADOR_DERECHO digitalRead(22)
 
+// Lectura de ADC, verificar en el robot de cada uno.
+
 #define CONSUMO_DERECHO analogRead(30)
 #define CONSUMO_IZQUIERDO analogRead(31)
+
+// Manejo de motores.
 
 #define HABILITACION_MOTORES HABILITACION_DERECHA; HABILITACION_IZQUIERDA
 #define HABILITACION_DERECHA digitalWrite(25, HIGH)
@@ -26,35 +46,31 @@
 #define DESHABILITACION_IZQUIERDA digitalWrite(25, LOW)
 
 
-#define MOTOR_IZQUIERDO_ADELANTE digitalWrite(27, LOW); digitalWrite(29, HIGH)
-#define MOTOR_IZQUIERDO_ATRAS digitalWrite(27, HIGH); digitalWrite(29, LOW)
-#define MOTOR_DERECHO_ADELANTE digitalWrite(24, LOW); digitalWrite(26, HIGH)
-#define MOTOR_DERECHO_ATRAS digitalWrite(24, HIGH); digitalWrite(26, LOW)
+#define MOTOR_IZQUIERDO_ATRAS digitalWrite(27, LOW); digitalWrite(29, HIGH)
+#define MOTOR_IZQUIERDO_ADELANTE digitalWrite(27, HIGH); digitalWrite(29, LOW)
+#define MOTOR_DERECHO_ATRAS digitalWrite(24, LOW); digitalWrite(26, HIGH)
+#define MOTOR_DERECHO_ADELANTE digitalWrite(24, HIGH); digitalWrite(26, LOW)
+
 
 #include <FiniteStateMachine.h>
 
+// Maq completa de prueba.
 
-State Pruebas = State(PruebasUpdate);  //no operation
-State Espera = State(EsperaEnter, EsperaUpdate, NULL);  //this state fades the LEDs in
-State SacarPalas = State(SacarPalasUpdate);  //this state flashes the leds FLASH_ITERATIONS times at 1000/FLASH_INTERVAL
-State Avanzar = State(AvanzarUpdate); //show the circular animation
-State GiroDerecha = State(GiroDerechaUpdate); //show the circular animation
-State GiroIzquierda = State(GiroIzquierdaUpdate); //show the circular animation
-State Retroceder = State(RetrocederUpdate); //show the circular animation
-State Victoria = State(VictoriaUpdate); //show the circular animation
+State Pruebas = State(PruebasUpdate);
+State Espera = State(EsperaEnter, EsperaUpdate, NULL);
+State SacarPalas = State(SacarPalasUpdate);
+State Avanzar = State(AvanzarEntrada, AvanzarUpdate, NULL);
+State GiroDerecha = State(GiroDerechaEntrada, GiroDerechaUpdate, NULL);
+State GiroIzquierda = State(GiroIzquierdaEntrada, GiroIzquierdaUpdate, NULL);
+State Retroceder = State(RetrocederEntrada, RetrocederUpdate, NULL);
+State Victoria = State(VictoriaUpdate);
 
 
-FSM stateMachine = FSM(Pruebas); //initialize state machine, start in state: noop
+FSM stateMachine = FSM(Pruebas); // Inicializacion de Maq
 
-/*
-  atmega32blinkpin32- *modified blink sketch for atmega32L by hexskrew*
-  Turns on an LED on for one second, then off for one second, repeatedly,   
-  one by one for all 32 outputs. 
-  This example code is in the public domain.
- */
 
 void setup() {                
-  // initialize the digital pin as an output. Los que se queman estan como INPUT.
+  // Inicializacion de todos los pines **************** NO TOCAR ***********
   pinMode(31, INPUT);   //Entradas sensor consumo de motores.
   pinMode(30, INPUT);   //Entradas sensor consumo de motores.
   pinMode(29, OUTPUT);  // Totem salida DER del 2
@@ -87,45 +103,20 @@ void setup() {
   pinMode(2, OUTPUT);   //OUT 3
   pinMode(1, OUTPUT);   //OUT 2
   pinMode(0, OUTPUT);   //OUT 1
+  Serial.begin(9600); 
 }
 
-  uint32_t tiempo_ms=0;
+  uint32_t static tiempo_ms=0; //  Control de tiempos
 
 void loop() {
- // uint32_t tiempo=200;
-  uint32_t static Accion=0;
   
-/*    manipulate the state machine by external input and control
-  */
-  //CONTROL THE STATE
-    switch (Accion){
-      case 0: //stateMachine.transitionTo(Pruebas); 
-      break;
-      case 1: //stateMachine.transitionTo(Espera); 
-      break; //first press
-      case 2: //stateMachine.transitionTo(SacarPalas); 
-      break; //second press
-//State Pruebas = State(PruebasUpdate);  //no operation
-//State Espera = State(fadeEnter, fadeUpdate, NULL);  //this state fades the LEDs in
-//State SacarPalas = State(SacarPalasUpdate);  //this state flashes the leds FLASH_ITERATIONS times at 1000/FLASH_INTERVAL
-//State Avanzar = State(AvanzarUpdate); //show the circular animation
-//State GiroDerecha = State(GiroDerechaUpdate); //show the circular animation
-//State GiroIzquierda = State(GiroIzquierdaUpdate); //show the circular animation
-//State Retroceder = State(RetrocederUpdate); //show the circular animation
-//State Victoria = State(VictoriaUpdate); //show the circular animation
-    }
-
   //THIS LINE IS CRITICAL
   //do not remove the stateMachine.update() call, it is what makes this program 'tick'
   stateMachine.update();
 
 }
 
-
-/*
-  ALL the functions below are helper functions for the states of the program
-*/
-///[noop state:update] the state machine is in a state that does nothing
+// Que hace en este estado.
 void PruebasUpdate() {
     DESHABILITACION_DERECHA;
     DESHABILITACION_IZQUIERDA;
@@ -134,111 +125,115 @@ void PruebasUpdate() {
     digitalWrite(SALIDA_3, OPTO_TI);
     digitalWrite(SALIDA_4, OPTO_TD);
     if ( 0 == PULSADOR_DERECHO ) stateMachine.transitionTo(Espera);
-  //this function gets called as long as the user have not pressed any buttons after startup
 }
-///[fade state:enter] the statemachine is just told to enter the fade state, we need to 
+
+// Como inicializa el estado.
 void EsperaEnter() {
   tiempo_ms = millis();
-//  uint32_t endMillis = startMillis + FADE_DURATION;
+  Serial.print("Esperando...");
   }
 
-///[fade state:update] we need to keep updating the tlc in order to see the effects
+// Que hace en este estado.
 void EsperaUpdate() {
-   if ( tiempo_ms + 5000 > millis() ) stateMachine.transitionTo(SacarPalas);
-
+   if ( tiempo_ms + 5000 < millis() ) stateMachine.transitionTo(SacarPalas);
 }
 
 
-///[flash state:update] this state blocks loop until done and does an immediateTransition to circle state
+// Que hace en este estado.
 void SacarPalasUpdate() {
+  digitalWrite(SALIDA_1, LOW);   // Indico en que estado estoy.
+  digitalWrite(SALIDA_2, HIGH);
+  digitalWrite(SALIDA_3, HIGH);
+  digitalWrite(SALIDA_4, LOW);
   HABILITACION_MOTORES;
   MOTOR_IZQUIERDO_ADELANTE;
   MOTOR_DERECHO_ADELANTE;
-  delay(300);
-  MOTOR_IZQUIERDO_ATRAS;
-  MOTOR_DERECHO_ATRAS;
   delay(300);
   DESHABILITACION_DERECHA;
   DESHABILITACION_IZQUIERDA;
   stateMachine.transitionTo(Avanzar);
 }
 
-///helper for flash state, set all LEDs either fully off or fully on
-void setAll(boolean state) {
-}
 
-///[circle state:update] animate the circle pattern
-void AvanzarUpdate() {
+// Como inicializa el estado.
+void AvanzarEntrada() {
+  digitalWrite(SALIDA_1, LOW);   // Indico en que estado estoy.
+  digitalWrite(SALIDA_2, HIGH);
+  digitalWrite(SALIDA_3, HIGH);
+  digitalWrite(SALIDA_4, HIGH);
   HABILITACION_MOTORES;
   MOTOR_IZQUIERDO_ADELANTE;
   MOTOR_DERECHO_ADELANTE;
-  digitalWrite(SALIDA_1, LOW);
-  if (0 != OPTO_DI) stateMachine.transitionTo(Retroceder);
-  if (0 != OPTO_DD) stateMachine.transitionTo(GiroIzquierda);
-  
+  tiempo_ms = millis(); // Comienzo de cronometro en ms
 }
 
+// Que hace en este estado.
+void AvanzarUpdate() {
+   if ( tiempo_ms + T_AV < millis() ) stateMachine.transitionTo(GiroIzquierda);
+  if (0 == OPTO_DI) stateMachine.transitionTo(Retroceder);
+  if (0 == OPTO_DD) stateMachine.transitionTo(GiroIzquierda);
+}
+
+// Que hace en este estado.
 void VictoriaUpdate() {
   DESHABILITACION_DERECHA;
   DESHABILITACION_IZQUIERDA;
 }
 
-void RetrocederUpdate() {
+// Como inicializa el estado.
+void RetrocederEntrada() {
+  digitalWrite(SALIDA_1, HIGH);         // Indico en que estado estoy.
+  digitalWrite(SALIDA_2, HIGH);
+  digitalWrite(SALIDA_3, HIGH);
+  digitalWrite(SALIDA_4, LOW);
   HABILITACION_MOTORES;
   MOTOR_IZQUIERDO_ATRAS;
   MOTOR_DERECHO_ATRAS;
-  digitalWrite(SALIDA_2, LOW);
-  if (0 != OPTO_DI) stateMachine.transitionTo(Retroceder);
-  if (0 != OPTO_DD) stateMachine.transitionTo(GiroIzquierda);
-  
+  tiempo_ms = millis(); // Comienzo de cronometro en ms
 }
-void GiroIzquierdaUpdate() {
+
+
+// Que hace en este estado.
+void RetrocederUpdate() {
+   if ( tiempo_ms + T_ATRAS < millis() ) stateMachine.transitionTo(GiroDerecha);
+}
+
+// Como inicializa el estado.
+void GiroIzquierdaEntrada() {
+  digitalWrite(SALIDA_1, HIGH);         // Indico en que estado estoy.
+  digitalWrite(SALIDA_2, LOW);
+  digitalWrite(SALIDA_3, HIGH);
+  digitalWrite(SALIDA_4, HIGH);
   HABILITACION_MOTORES;
   MOTOR_IZQUIERDO_ATRAS;
   MOTOR_DERECHO_ADELANTE;
-    digitalWrite(SALIDA_3, LOW);
-  if (0 != OPTO_DI) stateMachine.transitionTo(Retroceder);
-  if (0 != OPTO_DD) stateMachine.transitionTo(GiroIzquierda);
-  
+  tiempo_ms = millis(); // Comienzo de cronometro en ms
 }
-void GiroDerechaUpdate() {
+
+// Que hace en este estado.
+void GiroIzquierdaUpdate() {
+   if ( tiempo_ms + T_GIR_IZQ < millis() ) stateMachine.transitionTo(Avanzar);
+  if (0 == OPTO_DI) stateMachine.transitionTo(Retroceder);
+}
+
+
+
+// Como inicializa el estado.
+void GiroDerechaEntrada() {
+  digitalWrite(SALIDA_1, HIGH);         // Indico en que estado estoy.
+  digitalWrite(SALIDA_2, HIGH);
+  digitalWrite(SALIDA_3, LOW);
+  digitalWrite(SALIDA_4, HIGH);
   HABILITACION_MOTORES;
   MOTOR_IZQUIERDO_ADELANTE;
   MOTOR_DERECHO_ATRAS;
-  digitalWrite(SALIDA_4, LOW);
-  if (0 != OPTO_DI) stateMachine.transitionTo(Retroceder);
-  if (0 != OPTO_DD) stateMachine.transitionTo(GiroIzquierda);
-  
+  tiempo_ms = millis(); // Comienzo de cronometro en ms
+}
+
+// Que hace en este estado.
+void GiroDerechaUpdate() {
+   if ( tiempo_ms + T_GIR_IZQ < millis() ) stateMachine.transitionTo(Avanzar);
 }
 
   
-//  do{
-//    digitalWrite(SALIDA_1, OPTO_DI);
-//    digitalWrite(SALIDA_2, OPTO_DD);
-//    digitalWrite(SALIDA_3, OPTO_TI);
-//    digitalWrite(SALIDA_4, OPTO_TD);
-//    
-////    digitalWrite(SALIDA_1, PULSADOR_DELANTERO);
-////    digitalWrite(SALIDA_2, PULSADOR_TRASERO);
-////    digitalWrite(SALIDA_1, PULSADOR_IZQUIERDO);
-////    digitalWrite(SALIDA_2, PULSADOR_DERECHO);
-//
-//    if(OPTO_DI==HIGH){
-//      HABILITACION_DERECHA;
-//      HABILITACION_IZQUIERDA;
-//    }
-//    
-//
-//    
-//    MOTOR_DERECHO_ADELANTE;
-//    delay(1000);
-//    MOTOR_DERECHO_ATRAS;
-//    delay(1000);
-//    
-//    MOTOR_IZQUIERDO_ADELANTE;
-//    delay(1000);
-//    MOTOR_IZQUIERDO_ATRAS;
-//    delay(1000);
-//  }while(1);
-//  
-//}
+

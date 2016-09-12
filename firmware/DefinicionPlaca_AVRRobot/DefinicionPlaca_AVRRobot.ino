@@ -43,7 +43,7 @@
 #define HABILITACION_IZQUIERDA digitalWrite(28, HIGH)
 
 #define DESHABILITACION_DERECHA digitalWrite(25, LOW)
-#define DESHABILITACION_IZQUIERDA digitalWrite(25, LOW)
+#define DESHABILITACION_IZQUIERDA digitalWrite(28, LOW)
 
 
 #define MOTOR_IZQUIERDO_ATRAS digitalWrite(27, LOW); digitalWrite(29, HIGH)
@@ -232,7 +232,9 @@ void GiroDerechaEntrada() {
 
 // Que hace en este estado.
 void GiroDerechaUpdate() {
-   if ( tiempo_ms + T_GIR_IZQ < millis() ) stateMachine.transitionTo(Avanzar);
+   //if ( tiempo_ms + T_GIR_IZQ < millis() ) stateMachine.transitionTo(Avanzar);
+  if ( T_GIR_IZQ < stateMachine.timeInCurrentState() ) stateMachine.transitionTo(Avanzar);
+
 }
 
   

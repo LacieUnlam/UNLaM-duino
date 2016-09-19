@@ -151,15 +151,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="353.64926"
-     inkscape:cy="742.84463"
+     inkscape:cx="296.07056"
+     inkscape:cy="662.03243"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="927"
      inkscape:window-height="1028"
      inkscape:window-x="944"
-     inkscape:window-y="75"
+     inkscape:window-y="24"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -237,31 +237,27 @@
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          sodipodi:type="arc" />
     </g>
-    <g
-       id="g3865"
-       transform="matrix(0.64,0,0,0.64,109.79761,-14.868141)">
-      <text
-         sodipodi:linespacing="125%"
-         id="text3772"
-         y="701.04846"
-         x="366.89166"
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           y="701.04846"
-           x="366.89166"
-           id="tspan3774"
-           sodipodi:role="line">Avazar</tspan></text>
-      <path
-         transform="translate(308.12397,344.52662)"
-         d="m 217.68787,342.22495 c 0,49.37342 -40.81652,89.39849 -91.16626,89.39849 -50.349743,0 -91.166271,-40.02507 -91.166271,-89.39849 0,-49.37343 40.816528,-89.3985 91.166271,-89.3985 50.34974,0 91.16626,40.02507 91.16626,89.3985 z"
-         sodipodi:ry="89.398499"
-         sodipodi:rx="91.166267"
-         sodipodi:cy="342.22495"
-         sodipodi:cx="126.52161"
-         id="path2990-6"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         sodipodi:type="arc" />
-    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:25.60000038px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="336.85632"
+       y="433.80286"
+       id="text3772"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3774"
+         x="336.85632"
+         y="433.80286">Avanzar</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path2990-6"
+       sodipodi:cx="126.52161"
+       sodipodi:cy="342.22495"
+       sodipodi:rx="91.166267"
+       sodipodi:ry="89.398499"
+       d="m 217.68787,342.22495 a 91.166267,89.398499 0 1 1 -182.332531,0 91.166267,89.398499 0 1 1 182.332531,0 z"
+       transform="matrix(0.64,0,0,0.64,307.36999,205.6289)" />
     <g
        id="g3875"
        transform="matrix(0.64,0,0,0.64,21.741252,103.67795)">
@@ -423,14 +419,14 @@
     <text
        xml:space="preserve"
        style="font-size:13.10719872px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="198.40634"
-       y="111.98597"
+       x="186.28452"
+       y="116.02658"
        id="text4438"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4440"
-         x="198.40634"
-         y="111.98597">Pulsador</tspan></text>
+         x="186.28452"
+         y="116.02658">Pulsador</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:13.10719872px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -467,14 +463,14 @@
     <text
        xml:space="preserve"
        style="font-size:13.10719872px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="318.64948"
-       y="506.40952"
+       x="374.20786"
+       y="492.26736"
        id="text4438-1-1-4"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4440-2-9-7"
-         x="318.64948"
-         y="506.40952">optoDI</tspan></text>
+         x="374.20786"
+         y="492.26736">optoDI</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:13.10719872px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -489,14 +485,14 @@
     <text
        xml:space="preserve"
        style="font-size:13.10719872px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="607.34296"
-       y="409.25244"
+       x="600.27191"
+       y="433.49609"
        id="text4438-1-9-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4440-2-3-0"
-         x="607.34296"
-         y="409.25244">t&gt;T_GIR_IZQ</tspan></text>
+         x="600.27191"
+         y="433.49609">t&gt;T_GIR_IZQ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:13.10719872px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -511,13 +507,13 @@
     <text
        xml:space="preserve"
        style="font-size:13.10719872px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="217.26715"
-       y="431.77039"
+       x="166.75952"
+       y="523.69427"
        id="text4438-1-9-5-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4440-2-3-0-0"
-         x="217.26715"
-         y="431.77039">t&gt;T_GIR_DER</tspan></text>
+         x="166.75952"
+         y="523.69427">t&gt;T_GIR_DER</tspan></text>
   </g>
 </svg>

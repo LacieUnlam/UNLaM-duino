@@ -56,6 +56,12 @@
 
 // Maq completa de prueba.
 
+/*******************************************************************************
+ Solución al problema de "was not declared in this scope" in Arduino 1.6.X
+*******************************************************************************/
+void dummy(){};
+State dummyState = State(dummy);
+
 State Pruebas       = State(PruebasUpdate);
 State Espera        = State(EsperaEnter, EsperaUpdate, NULL);
 State SacarPalas    = State(SacarPalasUpdate);

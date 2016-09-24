@@ -100,10 +100,10 @@ void setup() {
   pinMode(11, INPUT);   //OPTO
   pinMode(10, INPUT);   //OPTO
   pinMode(9, OUTPUT);   //Tx
-  pinMode(8, OUTPUT);   //Rx
-  pinMode(7, OUTPUT);  
-  pinMode(6, OUTPUT);  
-  pinMode(5, OUTPUT);  
+  pinMode(8,  INPUT);   //Rx
+  pinMode(7, OUTPUT);   // SCK  --> Programador ICP
+  pinMode(6, OUTPUT);   // MISO --> Programador ICP
+  pinMode(5, OUTPUT);   // MOSI --> Programador ICP
   pinMode(4, OUTPUT);   //OUT 4 -- LED4
   pinMode(3, OUTPUT);   //OUT PWM 0
   pinMode(2, OUTPUT);   //OUT 3 -- LED3

@@ -256,4 +256,30 @@ void GiroDerechaProceso() {
 }
 
   
+//Protocolo Placa Roboleds
+//************************
+//Se recibirá un byte, donde:
+//Bit 0 a 3: Se definen 16 efectos posibles.
+//Bit 4: Define dos velocidades para los efectos: Baja (0) y alta (1) .
+//Bit 5: Azul. Si está a uno, se utilizan los leds de ese color.
+//Bit 6: Verde. Si está a uno, se utilizan los leds de ese color.
+//Bit 7: Rojo. Si está a uno, se utilizan los leds de ese color.
 
+//Los 16 efectos posibles son afectados por los modificadores de color y los que realizan
+//secuencia, por el modificador de velocidad:
+//00: Estático. Todos los leds prendidos.
+//01: Avance (shift de uno) izquierda.
+//02: Retroceso (shift de uno) derecha.
+//03: Avance (shift de dos) izquierda.
+//04: Retroceso (shift de dos) derecha.
+//05: Auto fantástico.
+//06: Prende solo led 1.
+//07: Prende solo led 2.
+//08: Prende solo led 3.
+//09: Prende solo led 4.
+//10: Prende solo led 5.
+//11: Prende solo led 6.
+//12: Prenden solo leds 1-3.
+//13: Prenden solo leds 4-6.
+//14: Titilan alternados 1-3 y 4-6.
+//15: Todos titilan.

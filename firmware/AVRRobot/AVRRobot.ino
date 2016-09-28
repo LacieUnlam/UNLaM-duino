@@ -199,10 +199,11 @@ void VictoriaUpdate() {
 
 // Como inicializa el estado.
 void RetrocederEntrada() {
-  digitalWrite(SALIDA_1, HIGH);     // Indico en que estado estoy.
+  digitalWrite(SALIDA_1, HIGH);      // Indico en que estado estoy.
   digitalWrite(SALIDA_2, HIGH);
   digitalWrite(SALIDA_3, HIGH);
   digitalWrite(SALIDA_4, LOW);
+//  Serial.write(6+0);                 // Para mdulo con LEDs
   HABILITACION_MOTORES;
   MOTOR_IZQUIERDO_ATRAS;
   MOTOR_DERECHO_ATRAS;
@@ -212,6 +213,7 @@ void RetrocederEntrada() {
 // Que hace en este estado.
 void RetrocederUpdate() {
    if ( T_ATRAS < stateMachine.timeInCurrentState() ) stateMachine.transitionTo(GiroDerecha);
+//  Serial.write(6+9);                 // Para mdulo con LEDs
 }
 
 // Como inicializa el estado.
@@ -220,6 +222,7 @@ void GiroIzquierdaEntrada() {
   digitalWrite(SALIDA_2, LOW);
   digitalWrite(SALIDA_3, HIGH);
   digitalWrite(SALIDA_4, HIGH);
+//  Serial.write(6+1);                 // Para mdulo con LEDs
   HABILITACION_MOTORES;
   MOTOR_IZQUIERDO_ATRAS;
   MOTOR_DERECHO_ADELANTE;
@@ -239,6 +242,7 @@ void GiroDerechaEntrada() {
   digitalWrite(SALIDA_2, HIGH);
   digitalWrite(SALIDA_3, LOW);
   digitalWrite(SALIDA_4, HIGH);
+//  Serial.write(6+2);                 // Para mdulo con LEDs
   HABILITACION_MOTORES;
   MOTOR_IZQUIERDO_ADELANTE;
   MOTOR_DERECHO_ATRAS;

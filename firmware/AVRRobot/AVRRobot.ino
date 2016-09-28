@@ -59,17 +59,17 @@
 /*******************************************************************************
  Solución al problema de "was not declared in this scope" in Arduino 1.6.X
 *******************************************************************************/
-void dummy(){};
-State dummyState = State(dummy);
+void descarte(){};
+State estadoDescartar = State(descarte);
 
-State Pruebas       = State(PruebasUpdate);
-State Espera        = State(EsperaEnter, EsperaUpdate, NULL);
-State SacarPalas    = State(SacarPalasUpdate);
-State Avanzar       = State(AvanzarEntrada, AvanzarUpdate, NULL);
-State GiroDerecha   = State(GiroDerechaEntrada, GiroDerechaUpdate, NULL);
-State GiroIzquierda = State(GiroIzquierdaEntrada, GiroIzquierdaUpdate, NULL);
-State Retroceder    = State(RetrocederEntrada, RetrocederUpdate, NULL);
-State Victoria      = State(VictoriaUpdate);
+State Pruebas       = State(PruebasProceso);
+State Espera        = State(EsperaEntrada, EsperaProceso, NULL);
+State SacarPalas    = State(SacarPalasProceso);
+State Avanzar       = State(AvanzarEntrada, AvanzarProceso, NULL);
+State GiroDerecha   = State(GiroDerechaEntrada, GiroDerechaProceso, NULL);
+State GiroIzquierda = State(GiroIzquierdaEntrada, GiroIzquierdaProceso, NULL);
+State Retroceder    = State(RetrocederEntrada, RetrocederProceso, NULL);
+State Victoria      = State(VictoriaProceso);
 
 
 FSM stateMachine = FSM(Pruebas); // Inicializacion de Maq
@@ -126,7 +126,7 @@ void loop() {
 }
 
 // Que hace en este estado.
-void PruebasUpdate() {
+void PruebasProceso() {
     DESHABILITACION_DERECHA;
     DESHABILITACION_IZQUIERDA;
     digitalWrite(SALIDA_1, OPTO_DI);   // set the LED on
@@ -137,13 +137,13 @@ void PruebasUpdate() {
 }
 
 // Como inicializa el estado.
-void EsperaEnter() {
+void EsperaEntrada() {
   Serial.print("Esperando...");
   digitalWrite(SALIDA_4, !digitalRead(SALIDA_4));
   }
 
 // Que hace en este estado.
-void EsperaUpdate() {
+void EsperaProceso() {
   titila_enclavamiento= (stateMachine.timeInCurrentState()/100);
   if (titila_enclavamiento != titila_anterior) {
     titila_anterior= titila_enclavamiento;
@@ -154,7 +154,7 @@ void EsperaUpdate() {
 
 
 // Que hace en este estado.
-void SacarPalasUpdate() {
+void SacarPalasProceso() {
   digitalWrite(SALIDA_1, LOW);   // Indico en que estado estoy.
   digitalWrite(SALIDA_2, HIGH);
   digitalWrite(SALIDA_3, HIGH);
@@ -185,14 +185,14 @@ void AvanzarEntrada() {
 }
 
 // Que hace en este estado.
-void AvanzarUpdate() {
+void AvanzarProceso() {
   if ( T_AV < stateMachine.timeInCurrentState() ) stateMachine.transitionTo(GiroIzquierda);
   if (0 == OPTO_DI) stateMachine.transitionTo(Retroceder);
   if (0 == OPTO_DD) stateMachine.transitionTo(GiroIzquierda);
 }
 
 // Que hace en este estado.
-void VictoriaUpdate() {
+void VictoriaProceso() {
   DESHABILITACION_DERECHA;
   DESHABILITACION_IZQUIERDA;
 }
@@ -211,7 +211,7 @@ void RetrocederEntrada() {
 
 
 // Que hace en este estado.
-void RetrocederUpdate() {
+void RetrocederProceso() {
    if ( T_ATRAS < stateMachine.timeInCurrentState() ) stateMachine.transitionTo(GiroDerecha);
 //  Serial.write(6+9);                 // Para mdulo con LEDs
 }
@@ -229,7 +229,7 @@ void GiroIzquierdaEntrada() {
 }
 
 // Que hace en este estado.
-void GiroIzquierdaUpdate() {
+void GiroIzquierdaProceso() {
    if ( T_GIR_IZQ < stateMachine.timeInCurrentState() ) stateMachine.transitionTo(Avanzar);
   if (0 == OPTO_DI) stateMachine.transitionTo(Retroceder);
 }
@@ -249,7 +249,7 @@ void GiroDerechaEntrada() {
 }
 
 // Que hace en este estado.
-void GiroDerechaUpdate() {
+void GiroDerechaProceso() {
   //if ( tiempo_ms + T_GIR_IZQ < millis() ) stateMachine.transitionTo(Avanzar);
   if ( T_GIR_IZQ < stateMachine.timeInCurrentState() ) stateMachine.transitionTo(Avanzar);
 

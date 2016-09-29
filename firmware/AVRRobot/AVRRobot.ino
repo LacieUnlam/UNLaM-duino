@@ -115,7 +115,7 @@ void setup() {
   Serial.begin(9600); 
 }
 
-//  uint32_t static tiempo_ms=0; //  Control de tiempos
+//uint32_t static tiempo_ms=0; //  Control de tiempos
 uint16_t titila;
 uint16_t titila_enclavamiento;
 uint16_t titila_anterior;
@@ -149,17 +149,13 @@ void PruebasProceso() {
 // Como inicializa el estado.
 void EsperaEntrada() {
   Serial.print("Esperando...");
-  digitalWrite(SALIDA_4, !digitalRead(SALIDA_4));
+  digitalWrite(SALIDA_4, LOW);//!digitalRead(SALIDA_4));
   }
 
 // Que hace en este estado.
 void EsperaProceso() {
-  titila_enclavamiento= (stateMachine.timeInCurrentState()/100);
-  if (titila_enclavamiento != titila_anterior) {
-    titila_anterior= titila_enclavamiento;
-    if ((titila_enclavamiento%5) == 0 ) digitalWrite(SALIDA_4, !digitalRead(SALIDA_4));
-  };
-  if ( 5000 < stateMachine.timeInCurrentState() ) stateMachine.transitionTo(SacarPalas);
+  if ((stateMachine.timeInCurrentState()%500) > 300) digitalWrite(SALIDA_4, HIGH);
+  if ( 5000 < stateMachine.timeInCurrentState())     stateMachine.transitionTo(SacarPalas);
 }
 
 

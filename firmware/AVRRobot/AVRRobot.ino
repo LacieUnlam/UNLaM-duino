@@ -38,21 +38,21 @@
 
 // Manejo de motores.
 
-#define HABILITACION_MOTORES    HABILITACION_DERECHA; HABILITACION_IZQUIERDA
-#define MOTOR_DERECHO      25
-#define MOTOR_IZQUIERDO    28
+#define HABILITACION_MOTORES     HABILITACION_DERECHA; HABILITACION_IZQUIERDA
+#define MOTOR_DERECHO            25
+#define MOTOR_IZQUIERDO          28
 
-#define HABILITACION_DERECHA    digitalWrite(MOTOR_DERECHO, HIGH)
-#define HABILITACION_IZQUIERDA  digitalWrite(MOTOR_IZQUIERDO, HIGH)
+#define HABILITACION_DERECHA        digitalWrite(MOTOR_DERECHO, HIGH)
+#define HABILITACION_IZQUIERDA      digitalWrite(MOTOR_IZQUIERDO, HIGH)
 
 #define DESHABILITACION_DERECHA     digitalWrite(MOTOR_DERECHO, LOW)
 #define DESHABILITACION_IZQUIERDA   digitalWrite(MOTOR_IZQUIERDO, LOW)
 
 
-#define MOTOR_IZQUIERDO_ATRAS       digitalWrite(27, LOW); digitalWrite(29, HIGH)
-#define MOTOR_IZQUIERDO_ADELANTE    digitalWrite(27, HIGH); digitalWrite(29, LOW)
-#define MOTOR_DERECHO_ATRAS         digitalWrite(24, LOW); digitalWrite(26, HIGH)
-#define MOTOR_DERECHO_ADELANTE      digitalWrite(24, HIGH); digitalWrite(26, LOW)
+#define MOTOR_IZQUIERDO_ATRAS       digitalWrite(MOTOR_IZQUIERDO -1, LOW);   digitalWrite(MOTOR_IZQUIERDO +1, HIGH)
+#define MOTOR_IZQUIERDO_ADELANTE    digitalWrite(MOTOR_IZQUIERDO -1, HIGH);  digitalWrite(MOTOR_IZQUIERDO +1, LOW)
+#define MOTOR_DERECHO_ATRAS         digitalWrite(MOTOR_DERECHO -1,   LOW);   digitalWrite(MOTOR_DERECHO +1,   HIGH)
+#define MOTOR_DERECHO_ADELANTE      digitalWrite(MOTOR_DERECHO -1,   HIGH);  digitalWrite(MOTOR_DERECHO +1,   LOW)
 
 
 #include <FiniteStateMachine.h>

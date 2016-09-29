@@ -39,11 +39,14 @@
 // Manejo de motores.
 
 #define HABILITACION_MOTORES    HABILITACION_DERECHA; HABILITACION_IZQUIERDA
-#define HABILITACION_DERECHA    digitalWrite(25, HIGH)
-#define HABILITACION_IZQUIERDA  digitalWrite(28, HIGH)
+#define MOTOR_DERECHO      25
+#define MOTOR_IZQUIERDO    28
 
-#define DESHABILITACION_DERECHA     digitalWrite(25, LOW)
-#define DESHABILITACION_IZQUIERDA   digitalWrite(28, LOW)
+#define HABILITACION_DERECHA    digitalWrite(MOTOR_DERECHO, HIGH)
+#define HABILITACION_IZQUIERDA  digitalWrite(MOTOR_IZQUIERDO, HIGH)
+
+#define DESHABILITACION_DERECHA     digitalWrite(MOTOR_DERECHO, LOW)
+#define DESHABILITACION_IZQUIERDA   digitalWrite(MOTOR_IZQUIERDO, LOW)
 
 
 #define MOTOR_IZQUIERDO_ATRAS       digitalWrite(27, LOW); digitalWrite(29, HIGH)
@@ -116,12 +119,19 @@ void setup() {
 uint16_t titila;
 uint16_t titila_enclavamiento;
 uint16_t titila_anterior;
+uint8_t vel_IZQ;              // Colocar Nro de 0 a 100
+uint8_t vel_DER;              // Colocar Nro de 0 a 100
+
 
 void loop() {
   
   //THIS LINE IS CRITICAL
   //do not remove the stateMachine.update() call, it is what makes this program 'tick'
   stateMachine.update();
+/*
+  if ((millis()%100)<vel_IZQ) HABILITACION_IZQUIERDA; else DESHABILITACION_IZQUIERDA;
+  if ((millis()%100)<vel_DER) HABILITACION_DERECHA;   else DESHABILITACION_DERECHA;
+*/
 
 }
 
@@ -189,6 +199,8 @@ void AvanzarProceso() {
   if ( T_AV < stateMachine.timeInCurrentState() ) stateMachine.transitionTo(GiroIzquierda);
   if (0 == OPTO_DI) stateMachine.transitionTo(Retroceder);
   if (0 == OPTO_DD) stateMachine.transitionTo(GiroIzquierda);
+//  Serial.print("Consumos"+analogRead(31)+";"+analogRead(30));  //ADC0 y ADC1
+  
 }
 
 // Que hace en este estado.

@@ -115,7 +115,7 @@ void setup() {
   Serial.begin(9600); 
 }
 
-//uint32_t static tiempo_ms=0; //  Control de tiempos
+uint32_t static tiempo_ms=0; //  Control de tiempos
 uint16_t titila;
 uint16_t titila_enclavamiento;
 uint16_t titila_anterior;
@@ -144,6 +144,8 @@ void PruebasProceso() {
     digitalWrite(SALIDA_3, PULSADOR_DERECHO);//OPTO_TI);
     digitalWrite(SALIDA_4, OPTO_TD);
     if ( 0 == PULSADOR_DERECHO ) stateMachine.transitionTo(Espera);
+    if ( 0 == PULSADOR_IZQUIERDO ) stateMachine.transitionTo(Victoria);
+     // digitalWrite(SALIDA_1, HIGH);   // set the LED on
 }
 
 // Como inicializa el estado.
@@ -203,6 +205,19 @@ void AvanzarProceso() {
 void VictoriaProceso() {
   DESHABILITACION_DERECHA;
   DESHABILITACION_IZQUIERDA;
+    if ((titila_enclavamiento%100)<(vel_IZQ)) digitalWrite(SALIDA_1, HIGH); else digitalWrite(SALIDA_1, LOW);
+    titila_enclavamiento++;
+    if (titila_enclavamiento>200) titila_enclavamiento=0;
+    if ((millis()%50)==0){
+    if (1==titila_anterior) {
+      vel_IZQ++;
+      if (vel_IZQ>=100)  titila_anterior=0;
+    }
+    if (0==titila_anterior) {
+      vel_IZQ--;
+      if (vel_IZQ<=10)  titila_anterior=1;
+    }
+    }
 }
 
 // Como inicializa el estado.

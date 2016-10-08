@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /media/ggg/ALUMNOS/UNLaM-duino/pcb/unlamduino/unlamduino.sch)
-    (date "sáb 08 oct 2016 11:42:57 ART")
+    (date "sáb 08 oct 2016 11:50:59 ART")
     (tool "Eeschema (2015-09-12 BZR 6188)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -17,7 +17,7 @@
   (components
     (comp (ref IC2)
       (value ATMEGA328-P)
-      (footprint DIL28)
+      (footprint Housings_DIP:DIP-28_W7.62mm_LongPads)
       (libsource (lib unlamduino-cache) (part ATMEGA328-P-RESCUE-UNLAMDIUNO))
       (sheetpath (names /) (tstamps /))
       (tstamp 57CF3282))
@@ -161,7 +161,7 @@
       (tstamp 57F454CA))
     (comp (ref L3)
       (value 330uHy)
-      (footprint Discret:CP36V)
+      (footprint Choke_Toroid_ThroughHole:Choke_Toroid_horizontal_Diameter4-5mm_Amidon-T16)
       (libsource (lib unlamduino-cache) (part L_Small))
       (sheetpath (names /) (tstamps /))
       (tstamp 57F450BF))

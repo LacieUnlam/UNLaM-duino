@@ -3,7 +3,7 @@
   (general
     (links 101)
     (no_connects 101)
-    (area 0 0 0 0)
+    (area 65.015 39.935 246.105 127.402001)
     (thickness 1.6)
     (drawings 0)
     (tracks 0)
@@ -182,7 +182,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x06 (layer F.Cu) (tedit 0) (tstamp 57F90692)
-    (at 240.03 100.965 270)
+    (at 240.665 100.965 270)
     (descr "Through hole pin header")
     (tags "pin header")
     (path /57F5F689)
@@ -724,14 +724,14 @@
   )
 
   (module Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10 (layer F.Cu) (tedit 552FFCCE) (tstamp 57F906EC)
-    (at 196.85 87.63 180)
+    (at 195.58 90.805 270)
     (descr "Diode, DO-41, SOD81, Horizontal, RM 10mm,")
     (tags "Diode, DO-41, SOD81, Horizontal, RM 10mm, 1N4007, SB140,")
     (path /57F45F06)
-    (fp_text reference D5 (at 5.38734 2.53746 180) (layer F.SilkS)
+    (fp_text reference D5 (at 5.38734 2.53746 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1N4007 (at 4.37134 -3.55854 180) (layer F.Fab)
+    (fp_text value 1N4007 (at 4.37134 -3.55854 270) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 7.62 -0.00254) (end 8.636 -0.00254) (layer F.SilkS) (width 0.15))
@@ -748,9 +748,9 @@
     (fp_line (start 2.54 -1.27254) (end 7.62 -1.27254) (layer F.SilkS) (width 0.15))
     (fp_line (start 7.62 -1.27254) (end 7.62 1.26746) (layer F.SilkS) (width 0.15))
     (fp_line (start 7.62 1.26746) (end 2.54 1.26746) (layer F.SilkS) (width 0.15))
-    (pad 2 thru_hole circle (at 10.16 -0.00254) (size 1.99898 1.99898) (drill 1.27) (layers *.Cu *.Mask F.SilkS)
+    (pad 2 thru_hole circle (at 10.16 -0.00254 90) (size 1.99898 1.99898) (drill 1.27) (layers *.Cu *.Mask F.SilkS)
       (net 17 /VIN))
-    (pad 1 thru_hole rect (at 0 -0.00254) (size 1.99898 1.99898) (drill 1.00076) (layers *.Cu *.Mask F.SilkS)
+    (pad 1 thru_hole rect (at 0 -0.00254 90) (size 1.99898 1.99898) (drill 1.00076) (layers *.Cu *.Mask F.SilkS)
       (net 8 "Net-(C1-Pad1)"))
   )
 
@@ -859,7 +859,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x10 (layer F.Cu) (tedit 0) (tstamp 57F90710)
-    (at 195.58 52.705 90)
+    (at 195.961 52.705 90)
     (descr "Through hole pin header")
     (tags "pin header")
     (path /57CF3A98)
@@ -908,7 +908,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x08 (layer F.Cu) (tedit 0) (tstamp 57F9071C)
-    (at 204.47 100.965 90)
+    (at 205.105 100.965 90)
     (descr "Through hole pin header")
     (tags "pin header")
     (path /57CF346A)
@@ -953,7 +953,7 @@
   )
 
   (module Connect:BARREL_JACK (layer F.Cu) (tedit 0) (tstamp 57F90723)
-    (at 180.975 95.885)
+    (at 181.61 95.885)
     (descr "DC Barrel Jack")
     (tags "Power Jack")
     (path /57F5A399)
@@ -1009,7 +1009,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x08 (layer F.Cu) (tedit 0) (tstamp 57F9073B)
-    (at 222.25 49.53 90)
+    (at 222.885 52.705 90)
     (descr "Through hole pin header")
     (tags "pin header")
     (path /57F5793B)
@@ -1054,7 +1054,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x04 (layer F.Cu) (tedit 0) (tstamp 57F90743)
-    (at 179.705 61.595)
+    (at 179.07 61.595)
     (descr "Through hole pin header")
     (tags "pin header")
     (path /57F59FA2)
@@ -1214,7 +1214,7 @@
   )
 
   (module Buttons_Switches_ThroughHole:SW_PUSH_SMALL (layer F.Cu) (tedit 0) (tstamp 57F90763)
-    (at 182.88 54.61)
+    (at 183.515 53.975)
     (path /57F4D9C0)
     (fp_text reference RESET1 (at 0 -0.762) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1302,7 +1302,7 @@
   )
 
   (module TO_SOT_Packages_THT:Pentawatt_Neutral_Staggered_Verical_TO220-5-T05D (layer F.Cu) (tedit 0) (tstamp 57F90778)
-    (at 151.765 81.915 90)
+    (at 193.04 80.645 90)
     (descr "Pentawatt, Neutral, Staggered, Verical, TO220-5, T05D,")
     (tags "Pentawatt, Neutral, Staggered, Verical, TO220-5, T05D,")
     (path /57F44886)
@@ -1577,7 +1577,7 @@
   )
 
   (module SHIELD_ARDUINO:ARDUINO_as_UNO_R3_CONTOUR (layer F.Cu) (tedit 547AF9AF) (tstamp 57F90A7C)
-    (at 211.074 76.835)
+    (at 211.455 76.835)
     (fp_text reference ARDUINO_UNO (at 0 -2.54) (layer F.SilkS)
       (effects (font (size 1.5 1.5) (thickness 0.15)))
     )

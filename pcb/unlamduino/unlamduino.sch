@@ -1,5 +1,5 @@
 EESchema Schematic File Version 2
-LIBS:power
+LIBS:conn
 LIBS:unlamduino-cache
 EELAYER 25 0
 EELAYER END
@@ -149,7 +149,7 @@ U 1 1 57D85FA7
 P 2600 4600
 F 0 "C10" H 2750 4700 50  0000 L CNN
 F 1 "100nF" H 2750 4600 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 2600 4600 60  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 2600 4600 60  0001 C CNN
 F 3 "" H 2600 4600 60  0000 C CNN
 	1    2600 4600
 	1    0    0    1   
@@ -206,7 +206,7 @@ U 1 1 57F3F797
 P 4850 6400
 F 0 "R8" V 4750 6400 50  0000 C CNN
 F 1 "1K" V 4850 6400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" V 4780 6400 50  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 4780 6400 50  0001 C CNN
 F 3 "" H 4850 6400 50  0000 C CNN
 	1    4850 6400
 	0    1    1    0   
@@ -217,7 +217,7 @@ U 1 1 57F3F7F4
 P 4850 6500
 F 0 "R9" V 4930 6500 50  0000 C CNN
 F 1 "1K" V 4850 6500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" V 4780 6500 50  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 4780 6500 50  0001 C CNN
 F 3 "" H 4850 6500 50  0000 C CNN
 	1    4850 6500
 	0    1    1    0   
@@ -241,7 +241,7 @@ U 1 1 57F3FF06
 P 2250 4000
 F 0 "C7" H 2275 4100 50  0000 L CNN
 F 1 "100nF" H 2275 3900 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 2288 3850 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 2288 3850 50  0001 C CNN
 F 3 "" H 2250 4000 50  0000 C CNN
 	1    2250 4000
 	1    0    0    -1  
@@ -252,7 +252,7 @@ U 1 1 57F3FFB1
 P 1950 4000
 F 0 "C5" H 1975 4100 50  0000 L CNN
 F 1 "100nF" H 1975 3900 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 1988 3850 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 1988 3850 50  0001 C CNN
 F 3 "" H 1950 4000 50  0000 C CNN
 	1    1950 4000
 	1    0    0    -1  
@@ -353,7 +353,7 @@ U 1 1 57F4B570
 P 1550 5800
 F 0 "RN1" V 1450 5800 50  0000 C CNN
 F 1 "10K" V 1550 5800 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" V 1480 5800 50  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 1480 5800 50  0001 C CNN
 F 3 "" H 1550 5800 50  0000 C CNN
 	1    1550 5800
 	1    0    0    -1  
@@ -375,7 +375,7 @@ U 1 1 57F4C2F6
 P 1550 6550
 F 0 "C6" H 1300 6550 50  0000 L CNN
 F 1 "100nF" H 1300 6650 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 1588 6400 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 1588 6400 50  0001 C CNN
 F 3 "" H 1550 6550 50  0000 C CNN
 	1    1550 6550
 	1    0    0    -1  
@@ -663,7 +663,7 @@ U 1 1 57F45F06
 P 3250 1900
 F 0 "D5" H 3250 2000 50  0000 C CNN
 F 1 "1N4007" H 3250 1800 50  0000 C CNN
-F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" H 3250 1900 50  0001 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 3250 1900 50  0001 C CNN
 F 3 "" H 3250 1900 50  0000 C CNN
 	1    3250 1900
 	-1   0    0    1   
@@ -674,7 +674,7 @@ U 1 1 57F45E27
 P 3850 2300
 F 0 "C2" H 3875 2400 50  0000 L CNN
 F 1 "100nF" H 3875 2200 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 3888 2150 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 3888 2150 50  0001 C CNN
 F 3 "" H 3850 2300 50  0000 C CNN
 	1    3850 2300
 	1    0    0    -1  
@@ -696,7 +696,7 @@ U 1 1 57F45722
 P 6800 2300
 F 0 "C4" H 6825 2400 50  0000 L CNN
 F 1 "100nF" H 6850 2200 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 6838 2150 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 6838 2150 50  0001 C CNN
 F 3 "" H 6800 2300 50  0000 C CNN
 	1    6800 2300
 	1    0    0    -1  
@@ -718,7 +718,7 @@ U 1 1 57F454CA
 P 5800 2300
 F 0 "D6" H 5800 2400 50  0000 C CNN
 F 1 "1N5819" H 5800 2200 50  0000 C CNN
-F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" H 5800 2300 50  0001 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 5800 2300 50  0001 C CNN
 F 3 "" H 5800 2300 50  0000 C CNN
 	1    5800 2300
 	0    1    1    0   
@@ -793,7 +793,7 @@ U 1 1 57F5BC7A
 P 7200 2200
 F 0 "R1" H 7100 2050 50  0000 C CNN
 F 1 "470" V 7200 2200 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" V 7130 2200 50  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 7130 2200 50  0001 C CNN
 F 3 "" H 7200 2200 50  0000 C CNN
 	1    7200 2200
 	1    0    0    1   
@@ -804,7 +804,7 @@ U 1 1 57F5C034
 P 1800 5850
 F 0 "D2" H 1800 5950 50  0000 C CNN
 F 1 "1N4007" H 1800 5750 50  0000 C CNN
-F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" H 1800 5850 50  0001 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 1800 5850 50  0001 C CNN
 F 3 "" H 1800 5850 50  0000 C CNN
 	1    1800 5850
 	0    1    1    0   
@@ -908,7 +908,7 @@ U 1 1 57F5F7BF
 P 7850 4350
 F 0 "RN2" H 7750 4200 50  0000 C CNN
 F 1 "1K" V 7850 4350 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" V 7780 4350 50  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 7780 4350 50  0001 C CNN
 F 3 "" H 7850 4350 50  0000 C CNN
 	1    7850 4350
 	1    0    0    1   
@@ -1101,7 +1101,7 @@ U 1 1 57F5C1FA
 P 8350 2300
 F 0 "C9" H 8375 2400 50  0000 L CNN
 F 1 "100nF" H 8400 2200 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 8388 2150 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 8388 2150 50  0001 C CNN
 F 3 "" H 8350 2300 50  0000 C CNN
 	1    8350 2300
 	1    0    0    -1  
@@ -1112,7 +1112,7 @@ U 1 1 57F5C200
 P 8050 2300
 F 0 "C8" H 8075 2400 50  0000 L CNN
 F 1 "100uF 16v" H 7800 2150 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D7.5_L11.2_P2.5" H 8050 2300 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D6.3_L11.2_P2.5" H 8050 2300 50  0001 C CNN
 F 3 "" H 8050 2300 50  0000 C CNN
 	1    8050 2300
 	1    0    0    -1  
@@ -1154,4 +1154,53 @@ F 3 "" H 7750 1650 50  0000 C CNN
 	1    7650 1900
 	1    0    0    -1  
 $EndComp
+$Comp
+L TEST_1P A1
+U 1 1 58080CA5
+P 900 2650
+F 0 "A1" H 900 2920 50  0000 C CNN
+F 1 "Agujero" H 900 2850 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 1100 2650 50  0001 C CNN
+F 3 "" H 1100 2650 50  0000 C CNN
+	1    900  2650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 900  2650
+NoConn ~ 2750 2000
+$Comp
+L TEST_1P A3
+U 1 1 58080F61
+P 1250 2650
+F 0 "A3" H 1250 2920 50  0000 C CNN
+F 1 "Agujero" H 1250 2850 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 1450 2650 50  0001 C CNN
+F 3 "" H 1450 2650 50  0000 C CNN
+	1    1250 2650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1250 2650
+$Comp
+L TEST_1P A2
+U 1 1 58080FE0
+P 900 3000
+F 0 "A2" H 900 3270 50  0000 C CNN
+F 1 "Agujero" H 900 3200 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 1100 3000 50  0001 C CNN
+F 3 "" H 1100 3000 50  0000 C CNN
+	1    900  3000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 900  3000
+$Comp
+L TEST_1P A4
+U 1 1 58080FE7
+P 1250 3000
+F 0 "A4" H 1250 3270 50  0000 C CNN
+F 1 "Agujero" H 1250 3200 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 1450 3000 50  0001 C CNN
+F 3 "" H 1450 3000 50  0000 C CNN
+	1    1250 3000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1250 3000
 $EndSCHEMATC

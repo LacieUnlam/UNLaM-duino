@@ -307,7 +307,7 @@ U 1 1 57F4B05B
 P 9850 5800
 F 0 "Y2" V 9550 5800 50  0000 C CNN
 F 1 "16MHz" V 9650 5800 50  0000 C CNN
-F 2 "Crystals:Crystal_HC51-U_Vertical" H 9850 5800 50  0001 C CNN
+F 2 "Crystals:Crystal_HC50-U_Vertical" H 9850 5800 50  0001 C CNN
 F 3 "" H 9850 5800 50  0000 C CNN
 	1    9850 5800
 	0    -1   1    0   
@@ -1160,7 +1160,7 @@ U 1 1 58080CA5
 P 900 2650
 F 0 "A1" H 900 2920 50  0000 C CNN
 F 1 "Agujero" H 900 2850 50  0000 C CNN
-F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 1100 2650 50  0001 C CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 1100 2650 50  0001 C CNN
 F 3 "" H 1100 2650 50  0000 C CNN
 	1    900  2650
 	1    0    0    -1  
@@ -1173,7 +1173,7 @@ U 1 1 58080F61
 P 1250 2650
 F 0 "A3" H 1250 2920 50  0000 C CNN
 F 1 "Agujero" H 1250 2850 50  0000 C CNN
-F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 1450 2650 50  0001 C CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 1450 2650 50  0001 C CNN
 F 3 "" H 1450 2650 50  0000 C CNN
 	1    1250 2650
 	1    0    0    -1  
@@ -1185,7 +1185,7 @@ U 1 1 58080FE0
 P 900 3000
 F 0 "A2" H 900 3270 50  0000 C CNN
 F 1 "Agujero" H 900 3200 50  0000 C CNN
-F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 1100 3000 50  0001 C CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 1100 3000 50  0001 C CNN
 F 3 "" H 1100 3000 50  0000 C CNN
 	1    900  3000
 	1    0    0    -1  
@@ -1197,7 +1197,7 @@ U 1 1 58080FE7
 P 1250 3000
 F 0 "A4" H 1250 3270 50  0000 C CNN
 F 1 "Agujero" H 1250 3200 50  0000 C CNN
-F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 1450 3000 50  0001 C CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 1450 3000 50  0001 C CNN
 F 3 "" H 1450 3000 50  0000 C CNN
 	1    1250 3000
 	1    0    0    -1  

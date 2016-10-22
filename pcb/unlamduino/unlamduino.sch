@@ -46,7 +46,7 @@ F 1 "CONN_01X10" V 8950 4000 50  0001 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x10" H 8850 4000 60  0001 C CNN
 F 3 "" H 8850 4000 60  0000 C CNN
 	1    8850 4000
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 Text Label 5500 4150 2    60   ~ 0
 XTAL1

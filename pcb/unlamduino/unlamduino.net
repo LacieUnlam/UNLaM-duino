@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /media/ggg/ALUMNOS/UNLaM-duino/pcb/unlamduino/unlamduino.sch)
-    (date "sáb 22 oct 2016 13:24:13 ART")
+    (date "mié 02 nov 2016 20:37:48 ART")
     (tool "Eeschema (2015-09-12 BZR 6188)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -65,7 +65,7 @@
       (tstamp 57F3F7F4))
     (comp (ref C7)
       (value 100nF)
-      (footprint Capacitors_ThroughHole:C_Disc_D3_P2.5)
+      (footprint Capacitors_ThroughHole:C_Disc_D6_P5)
       (libsource (lib unlamduino-cache) (part C-RESCUE-UNLAMDIUNO))
       (sheetpath (names /) (tstamps /))
       (tstamp 57F3FF06))
@@ -262,19 +262,6 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 58080FE7)))
   (libparts
-    (libpart (lib conn) (part CONN_01X02)
-      (description "Connector, single row, 01x02")
-      (footprints
-        (fp Pin_Header_Straight_1X02)
-        (fp Pin_Header_Angled_1X02)
-        (fp Socket_Strip_Straight_1X02)
-        (fp Socket_Strip_Angled_1X02))
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_01X02))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name P2) (type passive))))
     (libpart (lib conn) (part CONN_01X08)
       (description "Connector, single row, 01x08")
       (footprints
@@ -294,121 +281,62 @@
         (pin (num 6) (name P6) (type passive))
         (pin (num 7) (name P7) (type passive))
         (pin (num 8) (name P8) (type passive))))
-    (libpart (lib conn) (part CONN_01X04)
-      (description "Connector, single row, 01x04")
+    (libpart (lib conn) (part CONN_02X03)
+      (description "Connector, double row, 02x03")
       (footprints
-        (fp Pin_Header_Straight_1X04)
-        (fp Pin_Header_Angled_1X04)
-        (fp Socket_Strip_Straight_1X04)
-        (fp Socket_Strip_Angled_1X04))
+        (fp Pin_Header_Straight_2X03)
+        (fp Pin_Header_Angled_2X03)
+        (fp Socket_Strip_Straight_2X03)
+        (fp Socket_Strip_Angled_2X03))
       (fields
         (field (name Reference) P)
-        (field (name Value) CONN_01X04))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name P2) (type passive))
-        (pin (num 3) (name P3) (type passive))
-        (pin (num 4) (name P4) (type passive))))
-    (libpart (lib unlamduino-cache) (part L_Small)
-      (footprints
-        (fp CP*)
-        (fp SM*))
-      (fields
-        (field (name Reference) L)
-        (field (name Value) L_Small))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib unlamduino-cache) (part Led_Small-RESCUE-UNLAMDIUNO)
-      (footprints
-        (fp CP*)
-        (fp SM*))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) Led_Small-RESCUE-UNLAMDIUNO))
-      (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name C) (type passive))))
-    (libpart (lib unlamduino-cache) (part R-RESCUE-UNLAMDIUNO)
-      (footprints
-        (fp R_*)
-        (fp Resistor_*))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R-RESCUE-UNLAMDIUNO))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib unlamduino-cache) (part C-RESCUE-UNLAMDIUNO)
-      (footprints
-        (fp C?)
-        (fp C_????_*)
-        (fp C_????)
-        (fp SMD*_c)
-        (fp Capacitor*))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C-RESCUE-UNLAMDIUNO))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib unlamduino-cache) (part C_Small)
-      (footprints
-        (fp C?)
-        (fp C_????_*)
-        (fp C_????)
-        (fp SMD*_c)
-        (fp Capacitor*))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C_Small))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib unlamduino-cache) (part Crystal_Small)
-      (footprints
-        (fp Crystal_))
-      (fields
-        (field (name Reference) Y)
-        (field (name Value) Crystal_Small))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))))
-    (libpart (lib conn) (part CONN_01X10)
-      (description "Connector, single row, 01x10")
-      (footprints
-        (fp Pin_Header_Straight_1X10)
-        (fp Pin_Header_Angled_1X10)
-        (fp Socket_Strip_Straight_1X10)
-        (fp Socket_Strip_Angled_1X10))
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_01X10))
+        (field (name Value) CONN_02X03))
       (pins
         (pin (num 1) (name P1) (type passive))
         (pin (num 2) (name P2) (type passive))
         (pin (num 3) (name P3) (type passive))
         (pin (num 4) (name P4) (type passive))
         (pin (num 5) (name P5) (type passive))
-        (pin (num 6) (name P6) (type passive))
-        (pin (num 7) (name P7) (type passive))
-        (pin (num 8) (name P8) (type passive))
-        (pin (num 9) (name P9) (type passive))
-        (pin (num 10) (name P10) (type passive))))
-    (libpart (lib unlamduino-cache) (part CP1-RESCUE-UNLAMDIUNO)
+        (pin (num 6) (name P6) (type passive))))
+    (libpart (lib conn) (part CONN_01X02)
+      (description "Connector, single row, 01x02")
       (footprints
-        (fp SMD*_Pol)
-        (fp c_elec*)
-        (fp C*elec)
-        (fp TantalC*)
-        (fp Elko*)
-        (fp CP*))
+        (fp Pin_Header_Straight_1X02)
+        (fp Pin_Header_Angled_1X02)
+        (fp Socket_Strip_Straight_1X02)
+        (fp Socket_Strip_Angled_1X02))
       (fields
-        (field (name Reference) C)
-        (field (name Value) CP1-RESCUE-UNLAMDIUNO))
+        (field (name Reference) P)
+        (field (name Value) CONN_01X02))
       (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name P2) (type passive))))
+    (libpart (lib conn) (part TEST_1P)
+      (description point)
+      (fields
+        (field (name Reference) W)
+        (field (name Value) TEST_1P))
+      (pins
+        (pin (num 1) (name 1) (type passive))))
+    (libpart (lib unlamduino-cache) (part AP1117)
+      (aliases
+        (alias AP111715)
+        (alias AP111718)
+        (alias AP111725)
+        (alias AP111733)
+        (alias AP111750))
+      (description "1A Low Dropout regulator, positive, adjustable output, NRND")
+      (docs http://www.diodes.com/datasheets/AP1117.pdf)
+      (footprints
+        (fp SOT-223*))
+      (fields
+        (field (name Reference) U)
+        (field (name Value) AP1117)
+        (field (name Footprint) TO_SOT_Packages_SMD:SOT-223))
+      (pins
+        (pin (num 1) (name GND/ADJ) (type power_in))
+        (pin (num 2) (name VO) (type power_out))
+        (pin (num 3) (name VI) (type power_in))))
     (libpart (lib unlamduino-cache) (part ATMEGA328-P-RESCUE-UNLAMDIUNO)
       (footprints
         (fp 28DIP-ELL600)
@@ -446,13 +374,19 @@
         (pin (num 26) (name "(PCINT11/ADC3)PC3") (type BiDi))
         (pin (num 27) (name "(PCINT12/SDA/ADC4)PC4") (type BiDi))
         (pin (num 28) (name "(PCINT13/SCL/ADC5)PC5") (type BiDi))))
-    (libpart (lib conn) (part TEST_1P)
-      (description point)
+    (libpart (lib unlamduino-cache) (part C-RESCUE-UNLAMDIUNO)
+      (footprints
+        (fp C?)
+        (fp C_????_*)
+        (fp C_????)
+        (fp SMD*_c)
+        (fp Capacitor*))
       (fields
-        (field (name Reference) W)
-        (field (name Value) TEST_1P))
+        (field (name Reference) C)
+        (field (name Value) C-RESCUE-UNLAMDIUNO))
       (pins
-        (pin (num 1) (name 1) (type passive))))
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib conn) (part JACK_2P)
       (fields
         (field (name Reference) J)
@@ -461,35 +395,57 @@
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))
         (pin (num 3) (name ~) (type passive))))
-    (libpart (lib unlamduino-cache) (part AP1117)
-      (aliases
-        (alias AP111715)
-        (alias AP111718)
-        (alias AP111725)
-        (alias AP111733)
-        (alias AP111750))
-      (description "1A Low Dropout regulator, positive, adjustable output, NRND")
-      (docs http://www.diodes.com/datasheets/AP1117.pdf)
+    (libpart (lib conn) (part CONN_01X04)
+      (description "Connector, single row, 01x04")
       (footprints
-        (fp SOT-223*))
+        (fp Pin_Header_Straight_1X04)
+        (fp Pin_Header_Angled_1X04)
+        (fp Socket_Strip_Straight_1X04)
+        (fp Socket_Strip_Angled_1X04))
       (fields
-        (field (name Reference) U)
-        (field (name Value) AP1117)
-        (field (name Footprint) TO_SOT_Packages_SMD:SOT-223))
+        (field (name Reference) P)
+        (field (name Value) CONN_01X04))
       (pins
-        (pin (num 1) (name GND/ADJ) (type power_in))
-        (pin (num 2) (name VO) (type power_out))
-        (pin (num 3) (name VI) (type power_in))))
-    (libpart (lib unlamduino-cache) (part LM2576)
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name P2) (type passive))
+        (pin (num 3) (name P3) (type passive))
+        (pin (num 4) (name P4) (type passive))))
+    (libpart (lib unlamduino-cache) (part CP1-RESCUE-UNLAMDIUNO)
+      (footprints
+        (fp SMD*_Pol)
+        (fp c_elec*)
+        (fp C*elec)
+        (fp TantalC*)
+        (fp Elko*)
+        (fp CP*))
       (fields
-        (field (name Reference) U)
-        (field (name Value) LM2576))
+        (field (name Reference) C)
+        (field (name Value) CP1-RESCUE-UNLAMDIUNO))
       (pins
-        (pin (num 1) (name +VIN) (type power_in))
-        (pin (num 2) (name +VOUT) (type power_out))
-        (pin (num 3) (name GND) (type power_in))
-        (pin (num 4) (name FB) (type input))
-        (pin (num 5) (name ON/OFF) (type input))))
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib unlamduino-cache) (part C_Small)
+      (footprints
+        (fp C?)
+        (fp C_????_*)
+        (fp C_????)
+        (fp SMD*_c)
+        (fp Capacitor*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C_Small))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib unlamduino-cache) (part Crystal_Small)
+      (footprints
+        (fp Crystal_))
+      (fields
+        (field (name Reference) Y)
+        (field (name Value) Crystal_Small))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))))
     (libpart (lib unlamduino-cache) (part D)
       (footprints
         (fp Diode_*)
@@ -517,6 +473,46 @@
       (pins
         (pin (num 1) (name K) (type passive))
         (pin (num 2) (name A) (type passive))))
+    (libpart (lib unlamduino-cache) (part LM2576)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) LM2576))
+      (pins
+        (pin (num 1) (name +VIN) (type power_in))
+        (pin (num 2) (name +VOUT) (type power_out))
+        (pin (num 3) (name GND) (type power_in))
+        (pin (num 4) (name FB) (type input))
+        (pin (num 5) (name ON/OFF) (type input))))
+    (libpart (lib unlamduino-cache) (part L_Small)
+      (footprints
+        (fp CP*)
+        (fp SM*))
+      (fields
+        (field (name Reference) L)
+        (field (name Value) L_Small))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib unlamduino-cache) (part Led_Small-RESCUE-UNLAMDIUNO)
+      (footprints
+        (fp CP*)
+        (fp SM*))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) Led_Small-RESCUE-UNLAMDIUNO))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name C) (type passive))))
+    (libpart (lib unlamduino-cache) (part R-RESCUE-UNLAMDIUNO)
+      (footprints
+        (fp R_*)
+        (fp Resistor_*))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R-RESCUE-UNLAMDIUNO))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib unlamduino-cache) (part SW_PUSH)
       (fields
         (field (name Reference) SW)
@@ -524,6 +520,27 @@
       (pins
         (pin (num 1) (name 1) (type passive))
         (pin (num 2) (name 2) (type passive))))
+    (libpart (lib conn) (part CONN_01X10)
+      (description "Connector, single row, 01x10")
+      (footprints
+        (fp Pin_Header_Straight_1X10)
+        (fp Pin_Header_Angled_1X10)
+        (fp Socket_Strip_Straight_1X10)
+        (fp Socket_Strip_Angled_1X10))
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_01X10))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name P2) (type passive))
+        (pin (num 3) (name P3) (type passive))
+        (pin (num 4) (name P4) (type passive))
+        (pin (num 5) (name P5) (type passive))
+        (pin (num 6) (name P6) (type passive))
+        (pin (num 7) (name P7) (type passive))
+        (pin (num 8) (name P8) (type passive))
+        (pin (num 9) (name P9) (type passive))
+        (pin (num 10) (name P10) (type passive))))
     (libpart (lib conn) (part CONN_01X06)
       (description "Connector, single row, 01x06")
       (footprints
@@ -540,29 +557,12 @@
         (pin (num 3) (name P3) (type passive))
         (pin (num 4) (name P4) (type passive))
         (pin (num 5) (name P5) (type passive))
-        (pin (num 6) (name P6) (type passive))))
-    (libpart (lib conn) (part CONN_02X03)
-      (description "Connector, double row, 02x03")
-      (footprints
-        (fp Pin_Header_Straight_2X03)
-        (fp Pin_Header_Angled_2X03)
-        (fp Socket_Strip_Straight_2X03)
-        (fp Socket_Strip_Angled_2X03))
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_02X03))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name P2) (type passive))
-        (pin (num 3) (name P3) (type passive))
-        (pin (num 4) (name P4) (type passive))
-        (pin (num 5) (name P5) (type passive))
         (pin (num 6) (name P6) (type passive)))))
   (libraries
-    (library (logical unlamduino-cache)
-      (uri /media/ggg/ALUMNOS/UNLaM-duino/pcb/unlamduino/unlamduino-cache.lib))
     (library (logical conn)
-      (uri /usr/local/share/kicad/library/conn.lib)))
+      (uri /usr/local/share/kicad/library/conn.lib))
+    (library (logical unlamduino-cache)
+      (uri /media/ggg/ALUMNOS/UNLaM-duino/pcb/unlamduino/unlamduino-cache.lib)))
   (nets
     (net (code 1) (name GND)
       (node (ref DR1) (pin 2))

@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/diego/git/github/UNLaM-duino/pcb/unlamduino/unlamduino.sch)
-    (date "vie 04 nov 2016 15:48:41 ART")
+    (date "vie 04 nov 2016 16:15:10 ART")
     (tool "Eeschema 4.0.2+dfsg1-2~bpo8+1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -161,7 +161,7 @@
       (tstamp 57F454CA))
     (comp (ref L3)
       (value 330uHy)
-      (footprint Choke_Toroid_ThroughHole:Choke_Toroid_5x10mm_Vertical)
+      (footprint huellas:INDUCTOR_V)
       (libsource (lib unlamduino-cache) (part L_Small))
       (sheetpath (names /) (tstamps /))
       (tstamp 57F450BF))

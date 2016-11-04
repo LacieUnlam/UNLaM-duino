@@ -1,4 +1,4 @@
-update=mié 19 oct 2016 21:14:19 ART
+update=vie 04 nov 2016 15:39:08 ART
 version=1
 last_client=kicad
 [pcbnew]
@@ -38,5 +38,3 @@ LabSize=79
 [eeschema]
 version=1
 LibDir=
-[eeschema/libraries]
-LibName1=conn

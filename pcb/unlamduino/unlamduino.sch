@@ -206,7 +206,7 @@ U 1 1 57F3F797
 P 4850 6400
 F 0 "R8" V 4750 6400 50  0000 C CNN
 F 1 "1K" V 4850 6400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 4780 6400 50  0001 C CNN
+F 2 "huellas:Resistor_Horizontal_RM7mm3d" V 4780 6400 50  0001 C CNN
 F 3 "" H 4850 6400 50  0000 C CNN
 	1    4850 6400
 	0    1    1    0   
@@ -217,7 +217,7 @@ U 1 1 57F3F7F4
 P 4850 6500
 F 0 "R9" V 4930 6500 50  0000 C CNN
 F 1 "1K" V 4850 6500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 4780 6500 50  0001 C CNN
+F 2 "huellas:Resistor_Horizontal_RM7mm3d" V 4780 6500 50  0001 C CNN
 F 3 "" H 4850 6500 50  0000 C CNN
 	1    4850 6500
 	0    1    1    0   
@@ -263,7 +263,7 @@ U 1 1 57F40063
 P 2100 3850
 F 0 "L2" V 2200 3900 50  0000 L CNN
 F 1 "L_Small" V 2200 3550 50  0000 L CNN
-F 2 "huellas:Resistor_Horizontal_RM7mm" H 2100 3850 50  0001 C CNN
+F 2 "huellas:Resistor_Horizontal_RM7mm3d" H 2100 3850 50  0001 C CNN
 F 3 "" H 2100 3850 50  0000 C CNN
 	1    2100 3850
 	0    -1   -1   0   
@@ -353,7 +353,7 @@ U 1 1 57F4B570
 P 1550 5800
 F 0 "RN1" V 1450 5800 50  0000 C CNN
 F 1 "10K" V 1550 5800 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 1480 5800 50  0001 C CNN
+F 2 "huellas:Resistor_Horizontal_RM7mm3d" V 1480 5800 50  0001 C CNN
 F 3 "" H 1550 5800 50  0000 C CNN
 	1    1550 5800
 	1    0    0    -1  
@@ -789,7 +789,7 @@ U 1 1 57F5BC7A
 P 7200 2200
 F 0 "R1" H 7100 2050 50  0000 C CNN
 F 1 "470" V 7200 2200 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 7130 2200 50  0001 C CNN
+F 2 "huellas:Resistor_Horizontal_RM7mm3d" V 7130 2200 50  0001 C CNN
 F 3 "" H 7200 2200 50  0000 C CNN
 	1    7200 2200
 	1    0    0    1   
@@ -901,7 +901,7 @@ U 1 1 57F5F7BF
 P 7850 4350
 F 0 "RN2" H 7750 4200 50  0000 C CNN
 F 1 "1K" V 7850 4350 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 7780 4350 50  0001 C CNN
+F 2 "huellas:Resistor_Horizontal_RM7mm3d" V 7780 4350 50  0001 C CNN
 F 3 "" H 7850 4350 50  0000 C CNN
 	1    7850 4350
 	1    0    0    1   

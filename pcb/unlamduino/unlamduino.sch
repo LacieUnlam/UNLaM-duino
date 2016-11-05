@@ -263,7 +263,7 @@ U 1 1 57F40063
 P 2100 3850
 F 0 "L2" V 2200 3900 50  0000 L CNN
 F 1 "L_Small" V 2200 3550 50  0000 L CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" H 2100 3850 50  0001 C CNN
+F 2 "huellas:Resistor_Horizontal_RM7mm" H 2100 3850 50  0001 C CNN
 F 3 "" H 2100 3850 50  0000 C CNN
 	1    2100 3850
 	0    -1   -1   0   

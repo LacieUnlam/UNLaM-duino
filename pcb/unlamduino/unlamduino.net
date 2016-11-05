@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/diego/git/github/UNLaM-duino/pcb/unlamduino/unlamduino.sch)
-    (date "vie 04 nov 2016 16:15:10 ART")
+    (date "sáb 05 nov 2016 01:39:19 ART")
     (tool "Eeschema 4.0.2+dfsg1-2~bpo8+1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -77,7 +77,7 @@
       (tstamp 57F3FFB1))
     (comp (ref L2)
       (value L_Small)
-      (footprint Resistors_ThroughHole:Resistor_Horizontal_RM10mm)
+      (footprint huellas:Resistor_Horizontal_RM7mm)
       (libsource (lib unlamduino-cache) (part L_Small))
       (sheetpath (names /) (tstamps /))
       (tstamp 57F40063))

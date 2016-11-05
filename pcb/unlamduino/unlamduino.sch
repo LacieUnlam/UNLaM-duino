@@ -1280,4 +1280,8 @@ F 3 "" H 1100 4200 50  0000 C CNN
 	1    900  4200
 	1    0    0    -1  
 $EndComp
+Text Label 4200 6400 0    60   ~ 0
+RXArdu
+Text Label 4200 6500 0    60   ~ 0
+TXArdu
 $EndSCHEMATC

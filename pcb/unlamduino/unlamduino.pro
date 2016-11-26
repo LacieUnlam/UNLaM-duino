@@ -1,4 +1,4 @@
-update=vie 04 nov 2016 15:39:08 ART
+update=sáb 26 nov 2016 11:40:03 ART
 version=1
 last_client=kicad
 [pcbnew]
@@ -37,4 +37,6 @@ SpiceUseNetNumbers=0
 LabSize=79
 [eeschema]
 version=1
-LibDir=
+LibDir=../../../../../../home/ggg/Descargas/kicad-library-master/library
+[eeschema/libraries]
+LibName1=conn

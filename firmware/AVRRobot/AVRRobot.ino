@@ -116,11 +116,15 @@ void setup() {
 }
 
 uint32_t static tiempo_ms=0; //  Control de tiempos
-uint16_t titila;
-uint16_t titila_enclavamiento;
-uint16_t titila_anterior;
-uint8_t vel_IZQ;              // Colocar Nro de 0 a 100
-uint8_t vel_DER;              // Colocar Nro de 0 a 100
+uint16_t  titila;
+uint16_t  titila_enclavamiento;
+uint16_t  bloqueo;
+uint16_t  titila_anterior;
+uint8_t   titila_periodo;
+uint8_t   titila_brillo;
+int8_t    titila_sentido;     //aumenta o disminuye
+uint8_t   vel_IZQ;              // Colocar Nro de 0 a 100
+uint8_t   vel_DER;              // Colocar Nro de 0 a 100
 
 
 void loop() {
@@ -150,14 +154,32 @@ void PruebasProceso() {
 
 // Como inicializa el estado.
 void EsperaEntrada() {
+  digitalWrite(SALIDA_4, HIGH);  //Apago todos los LEDs
+  digitalWrite(SALIDA_3, HIGH);
+  digitalWrite(SALIDA_1, HIGH);
+  digitalWrite(SALIDA_2, HIGH);
   Serial.print("Esperando...");
-  digitalWrite(SALIDA_4, LOW);//!digitalRead(SALIDA_4));
+  digitalWrite(SALIDA_1, LOW);   // Enciendo en orden.
+  delay(300);
+  digitalWrite(SALIDA_1, HIGH);
+  digitalWrite(SALIDA_2, LOW);
+  delay(300);
+  digitalWrite(SALIDA_2, HIGH);
+  digitalWrite(SALIDA_3, LOW);
+  delay(300);
+  digitalWrite(SALIDA_3, HIGH);
+  digitalWrite(SALIDA_4, LOW);
+  delay(300);
+  digitalWrite(SALIDA_4, HIGH);
   }
 
 // Que hace en este estado.
 void EsperaProceso() {
-  if ((stateMachine.timeInCurrentState()%500) > 300) digitalWrite(SALIDA_4, HIGH);
-  if ( 5000 < stateMachine.timeInCurrentState())     stateMachine.transitionTo(SacarPalas);
+  if (((stateMachine.timeInCurrentState()%400) > 300) ){
+    if(bloqueo==0) digitalWrite(SALIDA_2, !digitalRead(SALIDA_2));
+    bloqueo=1;
+  } else bloqueo=0;
+  if ( 5000 < stateMachine.timeInCurrentState()) stateMachine.transitionTo(SacarPalas);
 }
 
 
@@ -217,6 +239,9 @@ void VictoriaProceso() {
       vel_IZQ--;
       if (vel_IZQ<=10)  titila_anterior=1;
     }
+    }
+    if ((stateMachine.timeInCurrentState()%100)==0) {     // Cada cuanto t lo cambio
+      if (titila_sentido>0) titila_sentido;
     }
 }
 

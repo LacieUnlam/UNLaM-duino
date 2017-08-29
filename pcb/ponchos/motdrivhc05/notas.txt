@@ -1,0 +1,9 @@
+Driver motores:
+
+El pinout del shield arduino al L293 sigue las distribución de las soluciones comerciales Seeed
+Motor Shield v1 y v2.
+http://wiki.seeedstudio.com/wiki/Motor_Shield_V1.0
+http://wiki.seeed.cc/Motor_Shield_V2.0/
+El fabricante pone a disposición las librerías que resultarán compatibles con este poncho.
+
+

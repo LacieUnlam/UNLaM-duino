@@ -1,4 +1,4 @@
-*.bak
-*.bck
-*.dcm
+*bak
+*bck
+*dcm
 commit_msg

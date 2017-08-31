@@ -171,13 +171,13 @@ Wire Wire Line
 	7075 3600 7075 3675
 Connection ~ 7075 3675
 Wire Wire Line
-	7725 2375 9700 2375
+	7700 2375 9700 2375
 Wire Wire Line
 	7625 2575 9700 2575
 Wire Wire Line
 	7625 2775 9700 2775
 Wire Wire Line
-	7725 2975 9700 2975
+	7700 2975 9700 2975
 Wire Wire Line
 	8225 3350 8225 3450
 Wire Wire Line
@@ -547,22 +547,6 @@ Text Label 4150 2450 0    60   ~ 0
 T2
 Wire Wire Line
 	4050 2450 4150 2450
-Wire Wire Line
-	7625 2575 7625 2400
-Wire Wire Line
-	7625 2400 7475 2400
-Wire Wire Line
-	7725 2375 7725 2200
-Wire Wire Line
-	7725 2200 7475 2200
-Wire Wire Line
-	7625 2775 7625 3000
-Wire Wire Line
-	7625 3000 7475 3000
-Wire Wire Line
-	7475 3200 7725 3200
-Wire Wire Line
-	7725 3200 7725 2975
 $Comp
 L D_Schottky_Small D7
 U 1 1 59A3B6E7
@@ -812,4 +796,20 @@ Text Label 4275 4300 0    60   ~ 0
 BT_STATE
 Wire Wire Line
 	4050 4300 4275 4300
+Wire Wire Line
+	7475 2200 7700 2200
+Wire Wire Line
+	7700 2200 7700 2375
+Wire Wire Line
+	7625 2575 7625 2400
+Wire Wire Line
+	7625 2400 7475 2400
+Wire Wire Line
+	7700 2975 7700 3200
+Wire Wire Line
+	7700 3200 7475 3200
+Wire Wire Line
+	7625 2775 7625 3000
+Wire Wire Line
+	7625 3000 7475 3000
 $EndSCHEMATC

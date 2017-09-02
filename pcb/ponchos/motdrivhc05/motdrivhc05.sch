@@ -539,14 +539,14 @@ Wire Wire Line
 Wire Wire Line
 	2900 6450 2400 6450
 Connection ~ 2400 6450
-Text Label 4150 2325 0    60   ~ 0
+Text Label 4150 2450 0    60   ~ 0
 T1
 Wire Wire Line
-	4050 2325 4150 2325
-Text Label 4150 2450 0    60   ~ 0
+	4050 2450 4150 2450
+Text Label 4150 2325 0    60   ~ 0
 T2
 Wire Wire Line
-	4050 2450 4150 2450
+	4050 2325 4150 2325
 $Comp
 L D_Schottky_Small D7
 U 1 1 59A3B6E7

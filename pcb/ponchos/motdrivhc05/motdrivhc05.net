@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source /home/chuy/Documentos/Trabajo/facu/UNLaM-duino/pcb/ponchos/motdrivhc05/motdrivhc05.sch)
-    (date "mié 30 ago 2017 21:47:19 ART")
+    (source /mnt/2TGaucho/Trabajo/Facultad/UNLaM-duino/pcb/ponchos/motdrivhc05/motdrivhc05.sch)
+    (date "vie 01 sep 2017 21:07:57 ART")
     (tool "Eeschema 4.0.6-e0-6349~53~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -239,7 +239,6 @@
         (pin (num 1) (name K) (type passive))
         (pin (num 2) (name A) (type passive))))
     (libpart (lib gw-040) (part GW-040)
-      (description "Bluetooth HC-05 GW-040 module connector")
       (footprints
         (fp Pin_Header_Straight_1X*)
         (fp Pin_Header_Angled_1X*)
@@ -258,8 +257,6 @@
     (libpart (lib l293) (part L293)
       (aliases
         (alias L293D))
-      (description "Quadruple Half-H Drivers")
-      (docs http://www.ti.com/lit/ds/symlink/l293.pdf)
       (footprints
         (fp DIP*W7.62mm*))
       (fields
@@ -332,18 +329,18 @@
     (library (logical conn)
       (uri /usr/share/kicad/library/conn.lib))
     (library (logical shield_arduino)
-      (uri libs/shield_arduino.lib))
-    (library (logical gw-040)
-      (uri libs/gw-040.lib))
+      (uri /mnt/2TGaucho/Trabajo/Facultad/UNLaM-duino/pcb/ponchos/motdrivhc05/libs/shield_arduino.lib))
     (library (logical l293)
-      (uri libs/l293.lib)))
+      (uri /mnt/2TGaucho/Trabajo/Facultad/UNLaM-duino/pcb/ponchos/motdrivhc05/libs/l293.lib))
+    (library (logical gw-040)
+      (uri /mnt/2TGaucho/Trabajo/Facultad/UNLaM-duino/pcb/ponchos/motdrivhc05/libs/gw-040.lib)))
   (nets
     (net (code 1) (name /T2)
       (node (ref R4) (pin 2))
-      (node (ref SH1) (pin A4/2)))
-    (net (code 2) (name /T1)
-      (node (ref R3) (pin 2))
       (node (ref SH1) (pin A5/2)))
+    (net (code 2) (name /T1)
+      (node (ref SH1) (pin A4/2))
+      (node (ref R3) (pin 2)))
     (net (code 3) (name "Net-(D9-Pad1)")
       (node (ref J4) (pin 1))
       (node (ref Q1) (pin 2))

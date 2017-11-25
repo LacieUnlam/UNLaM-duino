@@ -1,4 +1,4 @@
-update=lun 28 ago 2017 21:48:35 ART
+update=sáb 23 sep 2017 12:36:43 ART
 version=1
 last_client=kicad
 [pcbnew]
@@ -39,3 +39,13 @@ LibName7=contrib
 LibName8=libs/shield_arduino
 LibName9=libs/l293
 LibName10=libs/gw-040
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

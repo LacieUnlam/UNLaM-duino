@@ -1,4 +1,4 @@
-update=sáb 26 ago 2017 10:52:46 ART
+update=sáb 04 nov 2017 17:59:48 ART
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -40,3 +38,5 @@ version=1
 LibDir=../../../../../../home/ggg/Descargas/kicad-library-master/library
 [eeschema/libraries]
 LibName1=conn
+[general]
+version=1

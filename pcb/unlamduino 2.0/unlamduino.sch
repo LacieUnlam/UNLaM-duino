@@ -519,7 +519,7 @@ $Comp
 L CONN_01X08 P3
 U 1 1 57F5793B
 P 10500 3950
-F 0 "P3" H 10500 4500 50  0000 C CNN
+F 0 "P3" H 10500 4450 50  0000 C CNN
 F 1 "CONN_01X08" V 10600 3950 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x08" H 10500 3950 50  0001 C CNN
 F 3 "" H 10500 3950 50  0000 C CNN
@@ -1156,10 +1156,10 @@ Wire Wire Line
 Text Notes 9050 1750 0    157  ~ 31
 PROGRAMACIÓN\nISP
 $Comp
-L TEST_1P A8
-U 1 1 581D272E
+L TEST_1P A9
+U 1 1 581D2925
 P 1250 3400
-F 0 "A8" H 1250 3670 50  0000 C CNN
+F 0 "A9" H 1250 3670 50  0000 C CNN
 F 1 "Agujero" H 1250 3600 50  0000 C CNN
 F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 1450 3400 50  0001 C CNN
 F 3 "" H 1450 3400 50  0000 C CNN
@@ -1167,36 +1167,14 @@ F 3 "" H 1450 3400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TEST_1P A6
-U 1 1 581D2881
+L TEST_1P A7
+U 1 1 581D2A84
 P 900 3400
-F 0 "A6" H 900 3670 50  0000 C CNN
+F 0 "A7" H 900 3670 50  0000 C CNN
 F 1 "Agujero" H 900 3600 50  0000 C CNN
 F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 1100 3400 50  0001 C CNN
 F 3 "" H 1100 3400 50  0000 C CNN
 	1    900  3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST_1P A9
-U 1 1 581D2925
-P 1250 3800
-F 0 "A9" H 1250 4070 50  0000 C CNN
-F 1 "Agujero" H 1250 4000 50  0000 C CNN
-F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 1450 3800 50  0001 C CNN
-F 3 "" H 1450 3800 50  0000 C CNN
-	1    1250 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST_1P A7
-U 1 1 581D2A84
-P 900 3800
-F 0 "A7" H 900 4070 50  0000 C CNN
-F 1 "Agujero" H 900 4000 50  0000 C CNN
-F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 1100 3800 50  0001 C CNN
-F 3 "" H 1100 3800 50  0000 C CNN
-	1    900  3800
 	1    0    0    -1  
 $EndComp
 Text Label 1650 5850 2    60   ~ 0
@@ -1219,32 +1197,10 @@ Wire Wire Line
 Wire Wire Line
 	2050 1900 2050 1550
 Wire Notes Line
-	4500 6950 6600 6950
-Wire Notes Line
-	6600 6950 6600 7750
-Wire Notes Line
-	6600 7750 4500 7750
-Wire Notes Line
-	4500 7750 4500 6950
-Text Notes 4500 7100 0    79   ~ 0
+	5850 6850 5850 7750
+Text Notes 5900 7000 0    79   ~ 0
 USB a serie TTL
-Text Notes 4550 7750 0    79   ~ 0
-Rx\nTx\nVcc\nCTS\nGND
-Text Notes 6300 7650 0    79   ~ 0
-GND\nTx\nRx\n+
-Wire Bus Line
-	4800 7250 6250 7500
-Wire Bus Line
-	4800 7350 6250 7350
-Wire Bus Line
-	4800 7700 6250 7250
-Wire Bus Line
-	6250 7600 4800 7500
-NoConn ~ 4800 7600
-Text Notes 5900 7100 0    79   ~ 0
-UNLaMduino
-Text Notes 4350 6950 0    79   ~ 0
-Conector serie programacion IDE-Arduino
+NoConn ~ 6150 7600
 $Comp
 L CONN_01X08 IOH1
 U 1 1 59A17F68
@@ -1378,7 +1334,27 @@ F 3 "" H 3050 2200 50  0000 C CNN
 	1    0    0    1   
 $EndComp
 NoConn ~ 1250 3400
-NoConn ~ 1250 3800
 NoConn ~ 900  3400
-NoConn ~ 900  3800
+Text Notes 5900 7750 0    79   ~ 0
+Rx\nTx\nVcc\nCTS\nGND
+Wire Notes Line
+	5850 6850 6900 6850
+Wire Notes Line
+	5850 7750 6900 7750
+Text Notes 6150 7650 0    79   ~ 0
+-NO usar
+Text Notes 5900 7150 0    79   ~ 0
+DTR
+Wire Notes Line
+	6900 7750 6900 6850
+Text Notes 2350 7400 0    79   ~ 0
+Con tension en puerto serie,\nenciende fuente\no alimenta circuito
+Wire Notes Line
+	2350 7350 2100 7350
+Wire Notes Line
+	2100 7350 2100 6100
+Wire Notes Line
+	1900 6400 1900 7250
+Wire Notes Line
+	1900 7250 2350 7250
 $EndSCHEMATC

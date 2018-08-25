@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew "(2015-09-12 BZR 6188)-product")
+(kicad_pcb (version 4) (host pcbnew 4.0.5+dfsg1-4)
 
   (general
     (links 101)
     (no_connects 0)
-    (area 22.9925 38.2725 113.135357 157.4725)
+    (area 26.942499 42.222499 96.542501 145.822501)
     (thickness 1.6)
     (drawings 37)
     (tracks 516)
@@ -45,7 +45,7 @@
   )
 
   (setup
-    (last_trace_width 0.9144)
+    (last_trace_width 0.25)
     (user_trace_width 0.6)
     (user_trace_width 0.9144)
     (trace_clearance 0.5)
@@ -413,7 +413,7 @@
       (net 7 GND))
     (pad 1 thru_hole rect (at 0 0 270) (size 1.7 1.7) (drill 0.8) (layers *.Cu *.Mask F.SilkS)
       (net 9 +5V))
-    (model Capacitors_ThroughHole.3dshapes/C_Radial_D6.3_L11.2_P2.5.wrl
+    (model ${KIPRJMOD}/huellas.3dview/C_Radial_D6.3_L11.2_P2.5.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1253,7 +1253,7 @@
       (net 7 GND))
     (pad 1 thru_hole rect (at 0 0 270) (size 1.7 1.7) (drill 0.8) (layers *.Cu *.Mask F.SilkS)
       (net 12 +3V3))
-    (model Capacitors_ThroughHole.3dshapes/C_Radial_D6.3_L11.2_P2.5.wrl
+    (model ${KIPRJMOD}/huellas.3dview/C_Radial_D6.3_L11.2_P2.5.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1791,7 +1791,7 @@
       (net 7 GND))
     (pad 1 thru_hole rect (at 0 0 270) (size 1.7 1.7) (drill 0.8) (layers *.Cu *.Mask F.SilkS)
       (net 8 "Net-(C1-Pad1)"))
-    (model Capacitors_ThroughHole.3dshapes/C_Radial_D6.3_L11.2_P2.5.wrl
+    (model ${KIPRJMOD}/huellas.3dview/C_Radial_D6.3_L11.2_P2.5.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1844,7 +1844,7 @@
   )
   (gr_circle (center 87.4925 138.5225) (end 87.9925 137.2725) (layer F.SilkS) (width 0.2))
   (gr_circle (center 87.4925 138.5225) (end 87.7425 137.7725) (layer F.SilkS) (width 0.2))
-  (gr_text "UNLAMDUINO\nLACIE-UNLaM" (at 32.2425 104.5225 90) (layer F.SilkS)
+  (gr_text "DIY ARDUINO" (at 32.2425 104.5225 90) (layer F.SilkS)
     (effects (font (size 3 3) (thickness 0.5)))
   )
   (gr_text + (at 77 140.25 90) (layer B.Cu)

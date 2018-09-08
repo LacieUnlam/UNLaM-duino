@@ -1,0 +1,6 @@
+
+youtube:
+https://www.youtube.com/channel/UC4unPLtykzwO7MB3IvaQZaA
+
+github:
+https://github.com/bitwiseAr/Curso-Arduino-desde-cero

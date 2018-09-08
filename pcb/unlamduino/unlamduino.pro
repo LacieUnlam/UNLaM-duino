@@ -1,4 +1,4 @@
-update=sáb 26 nov 2016 11:40:03 ART
+update=sáb 09 sep 2017 11:49:45 ART
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,6 +25,11 @@ version=1
 NetIExt=net
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=../../../../../../home/ggg/Descargas/kicad-library-master/library
+[eeschema/libraries]
+LibName1=conn
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -35,8 +40,3 @@ NetFmtName=
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=79
-[eeschema]
-version=1
-LibDir=../../../../../../home/ggg/Descargas/kicad-library-master/library
-[eeschema/libraries]
-LibName1=conn

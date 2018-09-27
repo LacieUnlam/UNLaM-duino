@@ -1,0 +1,27 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# Electromagnetic_Actor
+#
+DEF Electromagnetic_Actor L 0 1 N N 1 F N
+F0 "L" 50 150 50 H V L CNN
+F1 "Electromagnetic_Actor" 50 -50 50 H V L CNN
+F2 "" -25 100 50 V I C CNN
+F3 "" -25 100 50 V I C CNN
+$FPLIST
+ Inductor_*
+ L_*
+$ENDFPLIST
+DRAW
+S -100 100 100 0 0 1 10 N
+P 2 0 1 10 -50 100 50 0 N
+P 2 0 1 0 300 0 250 100 N
+X - 1 0 200 100 D 50 50 1 1 P
+X + 2 0 -100 100 U 50 50 1 1 P
+X ~ ~ 250 300 200 D 50 50 1 1 I
+X ~ ~ 300 -200 200 U 50 50 1 1 I
+X ~ ~ 350 300 200 D 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Electromagnetic_Actor
+D electro-magnetic actor
+K electromagnet coil inductor
+$ENDCMP
+#
+#End Doc Library

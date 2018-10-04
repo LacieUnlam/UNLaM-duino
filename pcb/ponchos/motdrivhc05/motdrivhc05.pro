@@ -1,4 +1,4 @@
-update=mié 22 ago 2018 19:23:00 -03
+update=sáb 29 sep 2018 13:34:47 ART
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,16 +25,6 @@ version=1
 NetIExt=net
 [general]
 version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [eeschema]
 version=1
 LibDir=libs
@@ -50,3 +40,13 @@ LibName8=libs/shield_arduino
 LibName9=libs/l293
 LibName10=libs/gw-040
 LibName11=mechanical
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1

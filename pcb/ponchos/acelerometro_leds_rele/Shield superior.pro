@@ -1,4 +1,4 @@
-update=30/08/2018 11:38:34 p.m.
+update=04/10/2018 09:40:23 p.m.
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=C:/Program Files/KiCad/share/kicad/Relay_THT.3dshapes/Relay_THT.3dshapes
@@ -66,3 +64,5 @@ LibName34=valves
 LibName35=C:/Program Files/KiCad/share/kicad/library/Relay
 LibName36=C:/Program Files/KiCad/share/kicad/library/relays
 LibName37=C:/Program Files/KiCad/share/kicad/library/rele
+[general]
+version=1

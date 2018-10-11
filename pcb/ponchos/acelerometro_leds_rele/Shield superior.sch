@@ -1,39 +1,6 @@
 EESchema Schematic File Version 2
-LIBS:Shield superior-rescue
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:Relay
-LIBS:philips
-LIBS:display
-LIBS:electromagnetic_actor
-LIBS:rele
+LIBS:7805
 LIBS:Shield superior-cache
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:relays
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -54,7 +21,7 @@ U 1 1 5B5E6C64
 P 3500 4250
 F 0 "J2" H 3500 4600 50  0000 C CNN
 F 1 "CONN_01X06" V 3600 4250 50  0000 C CNN
-F 2 "Connectors_JST:JST_EH_B06B-EH-A_06x2.50mm_Straight" H 3500 4250 50  0001 C CNN
+F 2 "huellas:JST_EH_B06B-EH-A_06x2.50mm_Straight" H 3500 4250 50  0001 C CNN
 F 3 "" H 3500 4250 50  0001 C CNN
 	1    3500 4250
 	-1   0    0    -1  
@@ -65,7 +32,7 @@ U 1 1 5B5E6C89
 P 3500 3450
 F 0 "J1" H 3500 3900 50  0000 C CNN
 F 1 "CONN_01X08" V 3600 3450 50  0000 C CNN
-F 2 "Connectors_JST:JST_EH_B08B-EH-A_08x2.50mm_Straight" H 3500 3450 50  0001 C CNN
+F 2 "huellas:JST_EH_B08B-EH-A_08x2.50mm_Straight" H 3500 3450 50  0001 C CNN
 F 3 "" H 3500 3450 50  0001 C CNN
 	1    3500 3450
 	-1   0    0    -1  
@@ -76,7 +43,7 @@ U 1 1 5B5E6E57
 P 6050 4100
 F 0 "J4" H 6050 4550 50  0000 C CNN
 F 1 "CONN_01X08" V 6150 4100 50  0000 C CNN
-F 2 "Connectors_JST:JST_EH_B08B-EH-A_08x2.50mm_Straight" H 6050 4100 50  0001 C CNN
+F 2 "huellas:JST_EH_B08B-EH-A_08x2.50mm_Straight" H 6050 4100 50  0001 C CNN
 F 3 "" H 6050 4100 50  0001 C CNN
 	1    6050 4100
 	1    0    0    -1  
@@ -87,7 +54,7 @@ U 1 1 5B5E6EB2
 P 6050 3100
 F 0 "J3" H 6050 3650 50  0000 C CNN
 F 1 "CONN_01X10" V 6150 3100 50  0000 C CNN
-F 2 "Connectors_JST:JST_EH_B10B-EH-A_10x2.50mm_Straight" H 6050 3100 50  0001 C CNN
+F 2 "huellas:JST_EH_B10B-EH-A_10x2.50mm_Straight" H 6050 3100 50  0001 C CNN
 F 3 "" H 6050 3100 50  0001 C CNN
 	1    6050 3100
 	1    0    0    -1  
@@ -98,7 +65,7 @@ U 1 1 5B5E6F70
 P 4100 4700
 F 0 "J5" H 4100 4900 50  0000 C CNN
 F 1 "CONN_01X03" V 4200 4700 50  0000 C CNN
-F 2 "Connectors_JST:JST_EH_B03B-EH-A_03x2.50mm_Straight" H 4100 4700 50  0001 C CNN
+F 2 "huellas:JST_EH_B03B-EH-A_03x2.50mm_Straight" H 4100 4700 50  0001 C CNN
 F 3 "" H 4100 4700 50  0001 C CNN
 F 4 "NeoPixel" V 4300 4700 60  0000 C CNN "Campo4"
 	1    4100 4700
@@ -110,21 +77,10 @@ U 1 1 5B5E70F3
 P 7200 2200
 F 0 "J6" H 7200 2550 50  0000 C TNN
 F 1 "Screw_Terminal_1x03" V 7050 2200 50  0000 C TNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-3pol" H 7200 1875 50  0001 C CNN
+F 2 "huellas:TerminalBlock_Pheonix_MKDS1.5-3pol" H 7200 1875 50  0001 C CNN
 F 3 "" H 7175 2300 50  0001 C CNN
 	1    7200 2200
 	-1   0    0    1   
-$EndComp
-$Comp
-L 7805 U1
-U 1 1 5B5E72E1
-P 3600 2550
-F 0 "U1" H 3750 2354 50  0000 C CNN
-F 1 "7805" H 3600 2750 50  0000 C CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 3600 2550 50  0001 C CNN
-F 3 "" H 3600 2550 50  0001 C CNN
-	1    3600 2550
-	-1   0    0    -1  
 $EndComp
 $Comp
 L CONN_01X08 J7
@@ -132,7 +88,7 @@ U 1 1 5B5E7780
 P 4300 1850
 F 0 "J7" H 4300 2300 50  0000 C CNN
 F 1 "CONN_01X08" V 4400 1850 50  0000 C CNN
-F 2 "Connectors_JST:JST_EH_B08B-EH-A_08x2.50mm_Straight" H 4300 1850 50  0001 C CNN
+F 2 "huellas:JST_EH_B08B-EH-A_08x2.50mm_Straight" H 4300 1850 50  0001 C CNN
 F 3 "" H 4300 1850 50  0001 C CNN
 F 4 "Acelerómetro" V 4500 1850 60  0000 C CNN "Campo4"
 	1    4300 1850
@@ -144,7 +100,7 @@ U 1 1 5B5E830F
 P 5050 2200
 F 0 "D1" H 5050 2300 50  0000 C CNN
 F 1 "D" H 5050 2100 50  0000 C CNN
-F 2 "Diodes_THT:D_5W_P12.70mm_Horizontal" H 5050 2200 50  0001 C CNN
+F 2 "huellas:D_5W_P10.16mm_Horizontal" H 5050 2200 50  0001 C CNN
 F 3 "" H 5050 2200 50  0001 C CNN
 	1    5050 2200
 	0    1    1    0   
@@ -195,7 +151,7 @@ U 1 1 5B60047E
 P 4550 3300
 F 0 "Q1" H 4750 3375 50  0000 L CNN
 F 1 "BC548" H 4750 3300 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 4750 3225 50  0001 L CIN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 4750 3225 50  0001 L CIN
 F 3 "" H 4550 3300 50  0001 L CNN
 	1    4550 3300
 	1    0    0    -1  
@@ -206,7 +162,7 @@ U 1 1 5B600503
 P 4350 3550
 F 0 "R1" V 4430 3550 50  0000 C CNN
 F 1 "1K" V 4350 3550 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4280 3550 50  0001 C CNN
+F 2 "huellas:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4280 3550 50  0001 C CNN
 F 3 "" H 4350 3550 50  0001 C CNN
 	1    4350 3550
 	1    0    0    -1  
@@ -294,7 +250,7 @@ U 1 1 5B605AC5
 P 5000 4500
 F 0 "R2" V 5080 4500 50  0000 C CNN
 F 1 "330" V 5000 4500 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4930 4500 50  0001 C CNN
+F 2 "huellas:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4930 4500 50  0001 C CNN
 F 3 "" H 5000 4500 50  0001 C CNN
 	1    5000 4500
 	0    1    1    0   
@@ -316,7 +272,7 @@ U 1 1 5B8888DD
 P 5900 2200
 F 0 "K1" H 6550 2350 50  0000 L CNN
 F 1 "AZ850-x" H 6550 2250 50  0000 L CNN
-F 2 "Relays_THT:Relay_THT_5V" H 6450 2250 50  0001 C CNN
+F 2 "huellas:Relay_THT_5V" H 6450 2250 50  0001 C CNN
 F 3 "" H 5700 2200 50  0001 C CNN
 	1    5900 2200
 	1    0    0    -1  
@@ -431,4 +387,15 @@ Wire Wire Line
 	3900 2700 3900 4300
 Wire Wire Line
 	4550 2700 3900 2700
+$Comp
+L 7805 U1
+U 1 1 5BBE958C
+P 3600 2550
+F 0 "U1" H 3750 2354 50  0000 C CNN
+F 1 "7805" H 3600 2750 50  0000 C CNN
+F 2 "huellas:TO-92_Inline_Wide" H 3600 2550 50  0001 C CNN
+F 3 "" H 3600 2550 50  0000 C CNN
+	1    3600 2550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

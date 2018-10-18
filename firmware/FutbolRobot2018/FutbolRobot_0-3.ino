@@ -10,7 +10,7 @@
 
 #define PinRx         0
 #define PinTx         1
-#define VelMotor      200
+#define VelMotor      150
 #define VelGiro       100
 #define PinPixel      6
 #define CantPixel     8
@@ -39,27 +39,18 @@ void setup() {
 
   pixels.begin();
 
-            pixels.setPixelColor(LedIzq, pixels.Color(0,0,255)); 
-            pixels.setPixelColor(LedDer, pixels.Color(0,0,255));
-            pixels.setPixelColor(LedStop1, pixels.Color(0,0,255)); 
-            pixels.setPixelColor(LedStop2, pixels.Color(0,0,255));   
-            pixels.setPixelColor(LedAde1, pixels.Color(255,255,0)); 
-            pixels.setPixelColor(LedAde2, pixels.Color(255,255,0));      
-            pixels.setPixelColor(LedAtr1, pixels.Color(0,0,255)); 
-            pixels.setPixelColor(LedAtr2, pixels.Color(0,0,255));
-            pixels.show(); 
-
-      delay(1000);
-
-  pixels.setPixelColor(LedIzq, pixels.Color(0,0,0)); 
-            pixels.setPixelColor(LedDer, pixels.Color(0,0,0));
-            pixels.setPixelColor(LedStop1, pixels.Color(0,0,0)); 
-            pixels.setPixelColor(LedStop2, pixels.Color(0,0,0));   
+            pixels.setPixelColor(LedIzq, pixels.Color(100,100,100)); 
+            pixels.setPixelColor(LedDer, pixels.Color(100,100,100));
+            pixels.setPixelColor(LedStop1, pixels.Color(100,100,100)); 
+            pixels.setPixelColor(LedStop2, pixels.Color(100,100,100));   
             pixels.setPixelColor(LedAde1, pixels.Color(0,0,0)); 
             pixels.setPixelColor(LedAde2, pixels.Color(0,0,0));      
             pixels.setPixelColor(LedAtr1, pixels.Color(0,0,0)); 
             pixels.setPixelColor(LedAtr2, pixels.Color(0,0,0));
             pixels.show(); 
+
+      delay(1000);
+
 }
 
 void loop() {
@@ -82,8 +73,8 @@ switch (Letra)
             pixels.setPixelColor(LedAde2, pixels.Color(0,255,0));      
             pixels.setPixelColor(LedAtr1, pixels.Color(0,0,0)); 
             pixels.setPixelColor(LedAtr2, pixels.Color(0,0,0));
-            pixels.show();    //envia el color establecido al pixel nombrado
         
+             pixels.show();    //envia el color establecido al pixel nombrado
       break;
 
    case 'D':         //retrocede
@@ -92,8 +83,8 @@ switch (Letra)
         motor.speed(MOTORA, ((-1) * VelMotor));      //enciendo ambos motores a velocidad normal en reversa
         motor.speed(MOTORB, ((-1) * VelMotor));
         
-        pixels.setPixelColor(LedAtr1, pixels.Color(255,64,0)); // cuando retrocede, enciende color NARANJA
-        pixels.setPixelColor(LedAtr2, pixels.Color(255,64,0));
+        pixels.setPixelColor(LedAtr1, pixels.Color(70,70,70)); // cuando retrocede, enciende color NARANJA
+        pixels.setPixelColor(LedAtr2, pixels.Color(70,70,70));
 
          pixels.setPixelColor(LedIzq, pixels.Color(0,0,0)); 
          pixels.setPixelColor(LedDer, pixels.Color(0,0,0));
@@ -103,7 +94,7 @@ switch (Letra)
          pixels.setPixelColor(LedAde2, pixels.Color(0,0,0));      
            
          
-        pixels.show();    //envia el color establecido al pixel nombrado
+     pixels.show();    //envia el color establecido al pixel nombrado
         
       break;
 
@@ -111,18 +102,18 @@ switch (Letra)
          
    case 'R':        //derecha
        
-          motor.speed(MOTORA, VelGiro);      //si estaba detenido, solo enciendo motor izquierdo
-          motor.speed(MOTORB, ((-1) * VelGiro));
+        motor.speed(MOTORA, VelGiro);      //si estaba detenido, solo enciendo motor izquierdo
+        motor.speed(MOTORB, ((-1) * VelGiro));
        
-            pixels.setPixelColor(LedDer, pixels.Color(255,255,0)); // cuando gira a derecha, enciende color AMARILLO
-            pixels.setPixelColor(LedIzq, pixels.Color(0,0,0)); 
-            pixels.setPixelColor(LedStop1, pixels.Color(0,0,0)); 
-            pixels.setPixelColor(LedStop2, pixels.Color(0,0,0));   
-            pixels.setPixelColor(LedAde1, pixels.Color(0,0,0)); // cuando avanza, enciende color  VERDE
-            pixels.setPixelColor(LedAde2, pixels.Color(0,0,0));      
-            pixels.setPixelColor(LedAtr1, pixels.Color(0,0,0)); 
-            pixels.setPixelColor(LedAtr2, pixels.Color(0,0,0));
-         pixels.show();    //envia el color establecido al pixel nombrado
+        pixels.setPixelColor(LedDer, pixels.Color(255,255,0)); // cuando gira a derecha, enciende color AMARILLO
+        pixels.setPixelColor(LedIzq, pixels.Color(0,0,0)); 
+        pixels.setPixelColor(LedStop1, pixels.Color(0,0,0)); 
+        pixels.setPixelColor(LedStop2, pixels.Color(0,0,0));   
+        pixels.setPixelColor(LedAde1, pixels.Color(0,0,0)); // cuando avanza, enciende color  VERDE
+        pixels.setPixelColor(LedAde2, pixels.Color(0,0,0));      
+        pixels.setPixelColor(LedAtr1, pixels.Color(0,0,0)); 
+        pixels.setPixelColor(LedAtr2, pixels.Color(0,0,0));
+       pixels.show();    //envia el color establecido al pixel nombrado
         
        break;
 
@@ -132,42 +123,42 @@ switch (Letra)
 
   case 'L':         //izquierda
 
-          motor.speed(MOTORA, ((-1) * VelGiro));
-          motor.speed(MOTORB, VelGiro);      //si estaba detenido, solo enciendo motor derecho 
+        motor.speed(MOTORA, ((-1) * VelGiro));
+        motor.speed(MOTORB, VelGiro);      //si estaba detenido, solo enciendo motor derecho 
         
 
         pixels.setPixelColor(LedIzq, pixels.Color(255,255,0)); // cuando gira izquierda, enciende color AMARILLO
          
-            pixels.setPixelColor(LedDer, pixels.Color(0,0,0));
-            pixels.setPixelColor(LedStop1, pixels.Color(0,0,0)); 
-            pixels.setPixelColor(LedStop2, pixels.Color(0,0,0));   
-            pixels.setPixelColor(LedAde1, pixels.Color(0,0,0)); // cuando avanza, enciende color  VERDE
-            pixels.setPixelColor(LedAde2, pixels.Color(0,0,0));      
-            pixels.setPixelColor(LedAtr1, pixels.Color(0,0,0)); 
-            pixels.setPixelColor(LedAtr2, pixels.Color(0,0,0));
+        pixels.setPixelColor(LedDer, pixels.Color(0,0,0));
+        pixels.setPixelColor(LedStop1, pixels.Color(0,0,0)); 
+        pixels.setPixelColor(LedStop2, pixels.Color(0,0,0));   
+        pixels.setPixelColor(LedAde1, pixels.Color(0,0,0)); // cuando avanza, enciende color  VERDE
+        pixels.setPixelColor(LedAde2, pixels.Color(0,0,0));      
+        pixels.setPixelColor(LedAtr1, pixels.Color(0,0,0)); 
+        pixels.setPixelColor(LedAtr2, pixels.Color(0,0,0));
         pixels.show();    //envia el color establecido al pixel nombrado
                 
       break;
 
   case 'S':                 //stop: ambos motores apagados
         
-          motor.brake(MOTORA);
-          motor.brake(MOTORB);
+         motor.brake(MOTORA);
+         motor.brake(MOTORB);
           
          pixels.setPixelColor(LedStop1, pixels.Color(255,0,0)); // cuando se detiene, enciende color 
          pixels.setPixelColor(LedStop2, pixels.Color(255,0,0));
          pixels.setPixelColor(LedIzq, pixels.Color(0,0,0)); 
-            pixels.setPixelColor(LedDer, pixels.Color(0,0,0));
+         pixels.setPixelColor(LedDer, pixels.Color(0,0,0));
              
-            pixels.setPixelColor(LedAde1, pixels.Color(0,0,0)); // cuando avanza, enciende color  VERDE
-            pixels.setPixelColor(LedAde2, pixels.Color(0,0,0));      
-            pixels.setPixelColor(LedAtr1, pixels.Color(0,0,0)); 
-            pixels.setPixelColor(LedAtr2, pixels.Color(0,0,0));
+         pixels.setPixelColor(LedAde1, pixels.Color(0,0,0)); // cuando avanza, enciende color  VERDE
+         pixels.setPixelColor(LedAde2, pixels.Color(0,0,0));      
+         pixels.setPixelColor(LedAtr1, pixels.Color(0,0,0)); 
+         pixels.setPixelColor(LedAtr2, pixels.Color(0,0,0));
          pixels.show();    //envia el color establecido al pixel nombrado
         
       break;
   }
 
-  
+ 
 
 }

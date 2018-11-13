@@ -1,4 +1,4 @@
-update=mié 31 oct 2018 21:25:01 ART
+update=sáb 29 sep 2018 13:34:47 ART
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,6 +25,21 @@ version=1
 NetIExt=net
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=libs
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=transistors
+LibName4=conn
+LibName5=linear
+LibName6=interface
+LibName7=contrib
+LibName8=libs/shield_arduino
+LibName9=libs/l293
+LibName10=libs/gw-040
+LibName11=mechanical
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -35,6 +50,3 @@ NetFmtName=
 SpiceAjustPassiveValues=0
 LabSize=60
 ERC_TestSimilarLabels=1
-[eeschema]
-version=1
-LibDir=

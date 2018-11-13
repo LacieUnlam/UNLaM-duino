@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name motdrivhc05-rescue)(type Legacy)(uri ${KIPRJMOD}/motdrivhc05-rescue.lib)(options "")(descr ""))
+  (lib (name shield_arduino)(type Legacy)(uri ${KIPRJMOD}/libs/shield_arduino.lib)(options "")(descr ""))
+  (lib (name l293)(type Legacy)(uri ${KIPRJMOD}/libs/l293.lib)(options "")(descr ""))
+  (lib (name gw-040)(type Legacy)(uri ${KIPRJMOD}/libs/gw-040.lib)(options "")(descr ""))
+)

@@ -1,6 +1,17 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:interface
+LIBS:contrib
+LIBS:shield_arduino
+LIBS:l293
+LIBS:gw-040
+LIBS:mechanical
 LIBS:motdrivhc05-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +26,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L motdrivhc05-rescue:ARDUINO_as_UNO SH1
+L ARDUINO_as_UNO SH1
 U 1 1 599E0363
 P 2775 3500
 F 0 "SH1" H 2800 2275 60  0000 C CNN
@@ -26,40 +37,40 @@ F 3 "" H 2575 3275 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:VCC #PWR01
+L VCC #PWR01
 U 1 1 599E186B
-P 9250 2225
-F 0 "#PWR01" H 9250 2075 50  0001 C CNN
-F 1 "VCC" H 9375 2300 50  0000 C CNN
-F 2 "" H 9250 2225 50  0001 C CNN
-F 3 "" H 9250 2225 50  0001 C CNN
-	1    9250 2225
+P 9325 2125
+F 0 "#PWR01" H 9325 1975 50  0001 C CNN
+F 1 "VCC" H 9450 2200 50  0000 C CNN
+F 2 "" H 9325 2125 50  0001 C CNN
+F 3 "" H 9325 2125 50  0001 C CNN
+	1    9325 2125
 	-1   0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:GND #PWR02
+L GND #PWR02
 U 1 1 599E1CE5
-P 9825 1925
-F 0 "#PWR02" H 9825 1675 50  0001 C CNN
-F 1 "GND" H 9650 1850 50  0000 C CNN
-F 2 "" H 9825 1925 50  0001 C CNN
-F 3 "" H 9825 1925 50  0001 C CNN
-	1    9825 1925
+P 9475 1825
+F 0 "#PWR02" H 9475 1575 50  0001 C CNN
+F 1 "GND" H 9300 1750 50  0000 C CNN
+F 2 "" H 9475 1825 50  0001 C CNN
+F 3 "" H 9475 1825 50  0001 C CNN
+	1    9475 1825
 	-1   0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:GND #PWR03
+L GND #PWR03
 U 1 1 599E1E65
-P 1275 3650
-F 0 "#PWR03" H 1275 3400 50  0001 C CNN
-F 1 "GND" H 1275 3500 50  0000 C CNN
-F 2 "" H 1275 3650 50  0001 C CNN
-F 3 "" H 1275 3650 50  0001 C CNN
-	1    1275 3650
+P 1725 3650
+F 0 "#PWR03" H 1725 3400 50  0001 C CNN
+F 1 "GND" H 1725 3500 50  0000 C CNN
+F 2 "" H 1725 3650 50  0001 C CNN
+F 3 "" H 1725 3650 50  0001 C CNN
+	1    1725 3650
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:GND #PWR04
+L GND #PWR04
 U 1 1 599E1F65
 P 4475 2775
 F 0 "#PWR04" H 4475 2525 50  0001 C CNN
@@ -70,7 +81,7 @@ F 3 "" H 4475 2775 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:GND #PWR05
+L GND #PWR05
 U 1 1 599E2178
 P 6300 3750
 F 0 "#PWR05" H 6300 3500 50  0001 C CNN
@@ -81,18 +92,18 @@ F 3 "" H 6300 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:L293 U1
+L L293 U1
 U 1 1 599E187A
 P 6500 2800
 F 0 "U1" H 6300 3825 50  0000 R CNN
 F 1 "L293" H 6300 3750 50  0000 R CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 6750 2050 50  0001 L CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm" H 6750 2050 50  0001 L CNN
 F 3 "" H 6200 3500 50  0001 C CNN
 	1    6500 2800
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:GND #PWR06
+L GND #PWR06
 U 1 1 599E1AF8
 P 8325 3550
 F 0 "#PWR06" H 8325 3300 50  0001 C CNN
@@ -107,26 +118,28 @@ Wire Wire Line
 Wire Wire Line
 	1675 3200 2025 3200
 Wire Wire Line
-	9250 2275 9550 2275
+	9325 2175 10125 2175
 Wire Wire Line
-	9250 2275 9250 2225
+	9325 2175 9325 2125
 Wire Wire Line
-	1275 3450 1275 3575
+	9475 1775 9475 1825
 Wire Wire Line
-	2025 3450 1275 3450
+	1725 3450 1725 3650
 Wire Wire Line
-	2025 3575 1275 3575
-Connection ~ 1275 3575
+	2025 3450 1725 3450
+Wire Wire Line
+	2025 3575 1725 3575
+Connection ~ 1725 3575
 Wire Wire Line
 	4475 2700 4475 2775
 Wire Wire Line
 	4475 2700 3575 2700
 Wire Wire Line
-	6300 3600 6300 3675
+	6300 3600 6300 3750
 Wire Wire Line
 	6700 3675 6700 3600
 Wire Wire Line
-	6300 3675 6400 3675
+	6300 3675 6700 3675
 Connection ~ 6300 3675
 Wire Wire Line
 	6400 3600 6400 3675
@@ -135,23 +148,23 @@ Wire Wire Line
 	6600 3600 6600 3675
 Connection ~ 6600 3675
 Wire Wire Line
-	7225 2475 7750 2475
+	7225 2375 9325 2375
 Wire Wire Line
-	7150 2575 8150 2575
+	7150 2575 9200 2575
 Wire Wire Line
-	7150 2775 8500 2775
+	7150 2775 9325 2775
 Wire Wire Line
-	7225 2875 8900 2875
+	7225 2975 9225 2975
 Wire Wire Line
 	7750 3350 7750 3450
 Wire Wire Line
-	7750 3450 8150 3450
+	7750 3450 8900 3450
 Wire Wire Line
 	8150 3450 8150 3350
 Wire Wire Line
 	8325 3450 8325 3550
 $Comp
-L motdrivhc05-rescue:VCC #PWR07
+L VCC #PWR07
 U 1 1 599E21C4
 P 8325 1700
 F 0 "#PWR07" H 8325 1550 50  0001 C CNN
@@ -164,29 +177,29 @@ $EndComp
 Wire Wire Line
 	7750 2000 7750 1875
 $Comp
-L motdrivhc05-rescue:D_Schottky_Small D5
+L D_Schottky_Small D5
 U 1 1 599E27ED
 P 7750 3250
 F 0 "D5" V 7800 3300 50  0000 L CNN
 F 1 "1N5819" V 7650 3275 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" V 7750 3250 50  0001 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" V 7750 3250 50  0001 C CNN
 F 3 "" V 7750 3250 50  0001 C CNN
 	1    7750 3250
 	0    -1   1    0   
 $EndComp
 $Comp
-L motdrivhc05-rescue:D_Schottky_Small D6
+L D_Schottky_Small D6
 U 1 1 599E27F3
 P 8150 3250
 F 0 "D6" V 8200 3325 50  0000 L CNN
 F 1 "1N5819" V 8050 3300 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" V 8150 3250 50  0001 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" V 8150 3250 50  0001 C CNN
 F 3 "" V 8150 3250 50  0001 C CNN
 	1    8150 3250
 	0    -1   1    0   
 $EndComp
 $Comp
-L motdrivhc05-rescue:+3V3 #PWR08
+L +3V3 #PWR08
 U 1 1 599E2D18
 P 1675 3100
 F 0 "#PWR08" H 1675 2950 50  0001 C CNN
@@ -197,7 +210,7 @@ F 3 "" H 1675 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:+5V #PWR09
+L +5V #PWR09
 U 1 1 599E2D5C
 P 1425 3100
 F 0 "#PWR09" H 1425 2950 50  0001 C CNN
@@ -212,7 +225,7 @@ Wire Wire Line
 Wire Wire Line
 	1425 3325 1425 3100
 $Comp
-L motdrivhc05-rescue:VCC #PWR010
+L VCC #PWR010
 U 1 1 599E2F3E
 P 6600 1050
 F 0 "#PWR010" H 6600 900 50  0001 C CNN
@@ -223,9 +236,9 @@ F 3 "" H 6600 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6600 1050 6600 1100
+	6600 1050 6600 1800
 $Comp
-L motdrivhc05-rescue:+5V #PWR011
+L +5V #PWR011
 U 1 1 599E302B
 P 6400 1050
 F 0 "#PWR011" H 6400 900 50  0001 C CNN
@@ -236,7 +249,7 @@ F 3 "" H 6400 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6400 1050 6400 1100
+	6400 1050 6400 1800
 Text Label 5775 2200 2    60   ~ 0
 1A
 Wire Wire Line
@@ -286,18 +299,18 @@ Text Label 3800 2825 0    60   ~ 0
 Wire Wire Line
 	3575 2825 3800 2825
 $Comp
-L motdrivhc05-rescue:CP1_Small C2
+L CP1_Small C2
 U 1 1 59A1AF9D
 P 5650 1350
 F 0 "C2" H 5660 1420 50  0000 L CNN
 F 1 "100uf-6v" H 5660 1270 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D6.3_L11.2_P2.5" H 5650 1350 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D7.5_L11.2_P2.5" H 5650 1350 50  0001 C CNN
 F 3 "" H 5650 1350 50  0001 C CNN
 	1    5650 1350
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:CP1_Small C3
+L CP1_Small C3
 U 1 1 59A1B2B2
 P 6125 1350
 F 0 "C3" H 6135 1420 50  0000 L CNN
@@ -308,7 +321,7 @@ F 3 "" H 6125 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:GND #PWR012
+L GND #PWR012
 U 1 1 59A1B50A
 P 5925 1600
 F 0 "#PWR012" H 5925 1350 50  0001 C CNN
@@ -321,7 +334,7 @@ $EndComp
 Wire Wire Line
 	5925 1525 5925 1600
 Wire Wire Line
-	5650 1100 6125 1100
+	5650 1100 6400 1100
 Wire Wire Line
 	5650 1100 5650 1250
 Connection ~ 6400 1100
@@ -331,23 +344,23 @@ Connection ~ 6125 1100
 Wire Wire Line
 	5650 1450 5650 1525
 Wire Wire Line
-	5650 1525 5925 1525
+	5650 1525 6125 1525
 Wire Wire Line
 	6125 1525 6125 1450
 Connection ~ 5925 1525
 $Comp
-L motdrivhc05-rescue:CP1_Small C1
+L CP1_Small C1
 U 1 1 59A1B86C
 P 6925 1325
 F 0 "C1" H 6935 1395 50  0000 L CNN
 F 1 "47uf-50v" H 6935 1245 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D6.3_L11.2_P2.5" H 6925 1325 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D7.5_L11.2_P2.5" H 6925 1325 50  0001 C CNN
 F 3 "" H 6925 1325 50  0001 C CNN
 	1    6925 1325
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:GND #PWR013
+L GND #PWR013
 U 1 1 59A1B8C4
 P 6925 1500
 F 0 "#PWR013" H 6925 1250 50  0001 C CNN
@@ -365,23 +378,23 @@ Wire Wire Line
 	6925 1100 6925 1225
 Connection ~ 6600 1100
 $Comp
-L motdrivhc05-rescue:D_Schottky_Small D7
+L D_Schottky_Small D7
 U 1 1 59A3B6E7
 P 8500 3250
 F 0 "D7" V 8550 3300 50  0000 L CNN
 F 1 "1N5819" V 8400 3275 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" V 8500 3250 50  0001 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" V 8500 3250 50  0001 C CNN
 F 3 "" V 8500 3250 50  0001 C CNN
 	1    8500 3250
 	0    -1   1    0   
 $EndComp
 $Comp
-L motdrivhc05-rescue:D_Schottky_Small D8
+L D_Schottky_Small D8
 U 1 1 59A3B6ED
 P 8900 3250
 F 0 "D8" V 8950 3325 50  0000 L CNN
 F 1 "1N5819" V 8800 3300 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" V 8900 3250 50  0001 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" V 8900 3250 50  0001 C CNN
 F 3 "" V 8900 3250 50  0001 C CNN
 	1    8900 3250
 	0    -1   1    0   
@@ -394,51 +407,51 @@ Wire Wire Line
 Connection ~ 8500 3450
 Connection ~ 8325 3450
 $Comp
-L motdrivhc05-rescue:D_Schottky_Small D1
+L D_Schottky_Small D1
 U 1 1 59A3BC0B
 P 7750 2100
 F 0 "D1" V 7800 2150 50  0000 L CNN
 F 1 "1N5819" V 7650 2125 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" V 7750 2100 50  0001 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" V 7750 2100 50  0001 C CNN
 F 3 "" V 7750 2100 50  0001 C CNN
 	1    7750 2100
 	0    -1   1    0   
 $EndComp
 $Comp
-L motdrivhc05-rescue:D_Schottky_Small D2
+L D_Schottky_Small D2
 U 1 1 59A3BC11
 P 8150 2100
 F 0 "D2" V 8200 2175 50  0000 L CNN
 F 1 "1N5819" V 8050 2150 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" V 8150 2100 50  0001 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" V 8150 2100 50  0001 C CNN
 F 3 "" V 8150 2100 50  0001 C CNN
 	1    8150 2100
 	0    -1   1    0   
 $EndComp
 $Comp
-L motdrivhc05-rescue:D_Schottky_Small D3
+L D_Schottky_Small D3
 U 1 1 59A3BC17
 P 8500 2100
 F 0 "D3" V 8550 2150 50  0000 L CNN
 F 1 "1N5819" V 8400 2125 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" V 8500 2100 50  0001 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" V 8500 2100 50  0001 C CNN
 F 3 "" V 8500 2100 50  0001 C CNN
 	1    8500 2100
 	0    -1   1    0   
 $EndComp
 $Comp
-L motdrivhc05-rescue:D_Schottky_Small D4
+L D_Schottky_Small D4
 U 1 1 59A3BC1D
 P 8900 2100
 F 0 "D4" V 8950 2175 50  0000 L CNN
 F 1 "1N5819" V 8800 2150 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" V 8900 2100 50  0001 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" V 8900 2100 50  0001 C CNN
 F 3 "" V 8900 2100 50  0001 C CNN
 	1    8900 2100
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	7750 1875 8150 1875
+	7750 1875 8900 1875
 Wire Wire Line
 	8900 1875 8900 2000
 Wire Wire Line
@@ -448,18 +461,22 @@ Wire Wire Line
 	8500 2000 8500 1875
 Connection ~ 8500 1875
 Wire Wire Line
-	8150 2200 8150 2575
+	7750 2200 7750 3150
 Wire Wire Line
-	8500 2200 8500 2775
+	8150 2200 8150 3150
 Wire Wire Line
-	8900 2200 8900 2875
+	8500 2200 8500 3150
+Wire Wire Line
+	8900 2200 8900 3150
 Wire Wire Line
 	8325 1700 8325 1875
 Connection ~ 8325 1875
+Connection ~ 7750 2375
 Connection ~ 8150 2575
 Connection ~ 8500 2775
+Connection ~ 8900 2975
 $Comp
-L motdrivhc05-rescue:GW-040 J3
+L GW-040 J3
 U 1 1 59A4BBE6
 P 6000 4875
 F 0 "J3" H 6000 5225 50  0000 C CNN
@@ -467,10 +484,10 @@ F 1 "GW-040" V 6270 4875 50  0000 C CNN
 F 2 "Socket_Strips:Socket_Strip_Angled_1x06" H 6000 4875 50  0001 C CNN
 F 3 "" H 6000 4875 50  0001 C CNN
 	1    6000 4875
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:R_Small R1
+L R_Small R1
 U 1 1 59A4BF57
 P 4775 4550
 F 0 "R1" H 4805 4570 50  0000 L CNN
@@ -481,7 +498,7 @@ F 3 "" H 4775 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:R_Small R2
+L R_Small R2
 U 1 1 59A4C0FC
 P 4775 4900
 F 0 "R2" H 4805 4920 50  0000 L CNN
@@ -492,7 +509,7 @@ F 3 "" H 4775 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:GND #PWR014
+L GND #PWR014
 U 1 1 59A4C1EF
 P 4775 5125
 F 0 "#PWR014" H 4775 4875 50  0001 C CNN
@@ -503,11 +520,11 @@ F 3 "" H 4775 5125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4775 4650 4775 4725
+	4775 4650 4775 4800
 Wire Wire Line
 	4775 5000 4775 5125
 $Comp
-L motdrivhc05-rescue:GND #PWR015
+L GND #PWR015
 U 1 1 59A4C3C7
 P 5625 5075
 F 0 "#PWR015" H 5625 4825 50  0001 C CNN
@@ -522,7 +539,7 @@ Wire Wire Line
 Wire Wire Line
 	5625 4925 5625 5075
 $Comp
-L motdrivhc05-rescue:+5V #PWR016
+L +5V #PWR016
 U 1 1 59A4C522
 P 5725 4300
 F 0 "#PWR016" H 5725 4150 50  0001 C CNN
@@ -545,6 +562,7 @@ Wire Wire Line
 NoConn ~ 3575 2575
 NoConn ~ 2025 3075
 NoConn ~ 2025 2950
+NoConn ~ 2025 3700
 Wire Wire Line
 	3575 4425 4775 4425
 Text Label 3800 4425 0    60   ~ 0
@@ -564,19 +582,19 @@ NoConn ~ 2025 4300
 NoConn ~ 2025 4425
 NoConn ~ 2025 4550
 $Comp
-L motdrivhc05-rescue:PWR_FLAG #FLG017
+L PWR_FLAG #FLG017
 U 1 1 59A5033C
-P 9550 2225
-F 0 "#FLG017" H 9550 2300 50  0001 C CNN
-F 1 "PWR_FLAG" H 9650 2450 50  0000 C CNN
-F 2 "" H 9550 2225 50  0001 C CNN
-F 3 "" H 9550 2225 50  0001 C CNN
-	1    9550 2225
+P 9900 2125
+F 0 "#FLG017" H 9900 2200 50  0001 C CNN
+F 1 "PWR_FLAG" H 10150 2200 50  0000 C CNN
+F 2 "" H 9900 2125 50  0001 C CNN
+F 3 "" H 9900 2125 50  0001 C CNN
+	1    9900 2125
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	9550 2225 9550 2275
-Connection ~ 9550 2275
+	9900 2125 9900 2175
+Connection ~ 9900 2175
 Wire Wire Line
 	5425 4625 5800 4625
 Text Label 3775 4175 0    60   ~ 0
@@ -584,35 +602,72 @@ BT_STATE
 Wire Wire Line
 	7000 2200 7225 2200
 Wire Wire Line
-	7225 2200 7225 2475
+	7225 2200 7225 2375
 Wire Wire Line
 	7150 2575 7150 2400
 Wire Wire Line
 	7150 2400 7000 2400
 Wire Wire Line
-	7225 2875 7225 3200
+	7225 2975 7225 3200
 Wire Wire Line
 	7225 3200 7000 3200
 Wire Wire Line
 	7150 2775 7150 3000
 Wire Wire Line
 	7150 3000 7000 3000
+$Comp
+L Screw_Terminal_1x06 J1
+U 1 1 59AB9A6C
+P 10325 2475
+F 0 "J1" H 10325 3125 50  0000 C TNN
+F 1 "Screw_Terminal_1x06" V 10175 2475 50  0000 C TNN
+F 2 "Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-6pol" H 10325 1850 50  0001 C CNN
+F 3 "" H 10300 2875 50  0001 C CNN
+	1    10325 2475
+	-1   0    0    -1  
+$EndComp
 Wire Wire Line
-	9675 1875 9675 2175
+	10025 1775 10025 1975
 Wire Wire Line
-	9675 2175 9775 2175
-Text Label 7275 2475 0    60   ~ 0
+	10025 1975 10125 1975
+Wire Wire Line
+	9325 2375 9325 2575
+Wire Wire Line
+	9325 2575 10125 2575
+Wire Wire Line
+	9200 2575 9200 2475
+Wire Wire Line
+	9200 2475 9375 2475
+Wire Wire Line
+	9375 2475 9375 2375
+Wire Wire Line
+	9375 2375 10125 2375
+Wire Wire Line
+	9325 2775 9325 2975
+Wire Wire Line
+	9325 2975 10125 2975
+Wire Wire Line
+	9225 2975 9225 2850
+Wire Wire Line
+	9225 2850 9425 2850
+Wire Wire Line
+	9425 2850 9425 2775
+Wire Wire Line
+	9425 2775 10125 2775
+Text Label 9650 2575 0    60   ~ 0
 M1A
-Text Label 7275 2575 0    60   ~ 0
+Text Label 9650 2375 0    60   ~ 0
 M1B
-Text Label 7275 2775 0    60   ~ 0
+Text Label 9650 2975 0    60   ~ 0
 M2A
-Text Label 7275 2875 0    60   ~ 0
+Text Label 9650 2775 0    60   ~ 0
 M2B
 NoConn ~ 3575 2325
 NoConn ~ 3575 2450
+Wire Wire Line
+	10025 1775 9475 1775
 $Comp
-L motdrivhc05-rescue:Heatsink_PAD HS3
+L Heatsink_PAD HS3
 U 1 1 5B7DEF93
 P 4875 1025
 F 0 "HS3" H 4875 1250 50  0000 C CNN
@@ -623,7 +678,7 @@ F 3 "" H 4887 975 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:Heatsink_PAD HS1
+L Heatsink_PAD HS1
 U 1 1 5B7DF13A
 P 4325 1025
 F 0 "HS1" H 4325 1250 50  0000 C CNN
@@ -634,7 +689,7 @@ F 3 "" H 4337 975 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:Heatsink_PAD HS2
+L Heatsink_PAD HS2
 U 1 1 5B7DF17F
 P 4350 1450
 F 0 "HS2" H 4350 1675 50  0000 C CNN
@@ -645,7 +700,7 @@ F 3 "" H 4362 1400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:Heatsink_PAD HS4
+L Heatsink_PAD HS4
 U 1 1 5B7DF1D2
 P 4900 1450
 F 0 "HS4" H 4900 1675 50  0000 C CNN
@@ -658,7 +713,7 @@ $EndComp
 NoConn ~ 4325 1125
 NoConn ~ 4875 1125
 $Comp
-L motdrivhc05-rescue:GND #PWR018
+L GND #PWR018
 U 1 1 5B7DFE30
 P 4350 1625
 F 0 "#PWR018" H 4350 1375 50  0001 C CNN
@@ -669,7 +724,7 @@ F 3 "" H 4350 1625 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L motdrivhc05-rescue:GND #PWR019
+L GND #PWR019
 U 1 1 5B7DFF35
 P 4900 1625
 F 0 "#PWR019" H 4900 1375 50  0001 C CNN
@@ -686,7 +741,7 @@ Wire Wire Line
 Wire Wire Line
 	3575 4175 5125 4175
 $Comp
-L motdrivhc05-rescue:R_Small R3
+L R_Small R3
 U 1 1 5B7E0A59
 P 5325 4625
 F 0 "R3" H 5355 4645 50  0000 L CNN
@@ -708,121 +763,4 @@ Wire Wire Line
 	5150 5375 4325 5375
 Wire Wire Line
 	4325 5375 4325 4550
-Wire Wire Line
-	1275 3575 1275 3650
-Wire Wire Line
-	6300 3675 6300 3750
-Wire Wire Line
-	6400 3675 6600 3675
-Wire Wire Line
-	6600 3675 6700 3675
-Wire Wire Line
-	6400 1100 6400 1800
-Wire Wire Line
-	6125 1100 6400 1100
-Wire Wire Line
-	5925 1525 6125 1525
-Wire Wire Line
-	6600 1100 6600 1800
-Wire Wire Line
-	8150 3450 8325 3450
-Wire Wire Line
-	8500 3450 8900 3450
-Wire Wire Line
-	8325 3450 8500 3450
-Wire Wire Line
-	8150 1875 8325 1875
-Wire Wire Line
-	8500 1875 8900 1875
-Wire Wire Line
-	8325 1875 8500 1875
-Wire Wire Line
-	8150 2575 8150 3150
-Wire Wire Line
-	8500 2775 8500 3150
-Wire Wire Line
-	4775 4725 4775 4800
-Wire Wire Line
-	9550 2275 9775 2275
-$Comp
-L motdrivhc05-rescue:VCC #PWR0101
-U 1 1 5BDA9016
-P 1875 3700
-F 0 "#PWR0101" H 1875 3550 50  0001 C CNN
-F 1 "VCC" V 1875 3900 50  0000 C CNN
-F 2 "" H 1875 3700 50  0001 C CNN
-F 3 "" H 1875 3700 50  0001 C CNN
-	1    1875 3700
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	1875 3700 2025 3700
-Text Notes 725  4375 0    60   ~ 0
-Esta placa provee la \nalimentación para el\nArduino.
-Wire Notes Line
-	575  4400 1775 4400
-Wire Notes Line
-	1575 3800 1575 3625
-Wire Notes Line
-	1575 3625 1925 3625
-Wire Notes Line
-	1925 3625 1925 3800
-Wire Notes Line
-	1775 3800 1775 4400
-Wire Notes Line
-	1575 3800 1925 3800
-NoConn ~ 3575 4300
-$Comp
-L Connector:Screw_Terminal_01x02 J1
-U 1 1 5BE10F54
-P 9975 2175
-F 0 "J1" H 10055 2167 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10055 2076 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 9975 2175 50  0001 C CNN
-F 3 "~" H 9975 2175 50  0001 C CNN
-	1    9975 2175
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J2
-U 1 1 5BE11086
-P 9975 2575
-F 0 "J2" H 10125 2475 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 10500 2575 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 9975 2575 50  0001 C CNN
-F 3 "~" H 9975 2575 50  0001 C CNN
-	1    9975 2575
-	1    0    0    1   
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J4
-U 1 1 5BE11116
-P 9975 2875
-F 0 "J4" H 10125 2775 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 10500 2875 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 9975 2875 50  0001 C CNN
-F 3 "~" H 9975 2875 50  0001 C CNN
-	1    9975 2875
-	1    0    0    1   
-$EndComp
-Connection ~ 8900 2875
-Wire Wire Line
-	8900 2875 8900 3150
-Connection ~ 7750 2475
-Wire Wire Line
-	7750 2475 7750 3150
-Wire Wire Line
-	8900 2875 9775 2875
-Wire Wire Line
-	8500 2775 9775 2775
-Wire Wire Line
-	8150 2575 9775 2575
-Wire Wire Line
-	7750 2200 7750 2475
-Wire Wire Line
-	7750 2475 9775 2475
-Wire Wire Line
-	9675 1875 9825 1875
-Wire Wire Line
-	9825 1875 9825 1925
 $EndSCHEMATC

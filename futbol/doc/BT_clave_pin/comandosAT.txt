@@ -1,0 +1,25 @@
+AT
+ OK
+
+AT+NAME
+ +NAME:HC-06
+
+AT+NAME:EKO-2
+ OK
+
+AT+NAME
+ +NAME:EKO-2
+
+
+AT+PSWD:"2020"
+ OK
+
+Claves usadas:
+1024
+2020
+3232
+4242
+5454
+6090
+
+Nota: Los HC-05 no responden el nombre.

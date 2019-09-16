@@ -8,3 +8,8 @@
  * Desde el celular se vincula el dispositivo. Colocar la clave configurada.
  * Se abre Arduino Car, se selecciona por el nombre el dispositivo BT.
  * Se envían comandos y deben salir por el monitor serial. 
+
+URLs:
+ * https://create.arduino.cc/projecthub/electropeak/getting-started-with-hc-05-bluetooth-module-arduino-e0ca81
+ * https://forum.arduino.cc/index.php?topic=493712.0
+ * http://www.martyncurrey.com/arduino-and-hc-06-zs-040/

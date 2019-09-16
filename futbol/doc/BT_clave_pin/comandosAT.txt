@@ -22,4 +22,5 @@ Claves usadas:
 5454
 6090
 
-Nota: Los HC-05 no responden el nombre.
+Nota: Los HC-05 no responden el nombre. Probar agregar el signo de pregunta "AT+NAME?".
+
